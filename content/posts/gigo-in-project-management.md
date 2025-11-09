@@ -1,6 +1,6 @@
 ---
 created: "2025-07-08T10:38"
-date: 2025-07-08
+date: 2025-07-01
 updated: "2025-07-15T09:22"
 title: "Part 1: The GIGO Dilemma in Projects and How AI Can Help"
 description: Explore the garbage in, garbage out (GIGO) dilemma in project management and how AI-powered tools like natural language processing (NLP) and large language models (LLMs) can help solve this challenge by improving project inputs and reporting.
@@ -14,6 +14,7 @@ tags:
   - GIGO
   - agile
 publish: "true"
+series: ["AI in Agile Project Management"]
 ---
 
 In project management, especially in agile frameworks, there's a fundamental issue that has plagued even the most well-organized teams: the garbage in, [garbage out (GIGO) dilemma](https://www.techtarget.com/searchsoftwarequality/definition/garbage-in-garbage-out). At its core, GIGO highlights that poor-quality input results in poor-quality output—an adage true across many domains but particularly devastating in the world of project governance. When requirements are vague, reports are incomplete, or status updates are full of jargon, the results are often wasted time, unclear priorities, and projects that veer off course. As someone with decades of experience managing projects and working closely with agile teams, I've seen firsthand the real-world consequences of GIGO.

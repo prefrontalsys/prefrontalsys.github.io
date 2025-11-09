@@ -1,6 +1,6 @@
 ---
 created: "2025-07-08T10:38"
-date: 2025-07-08
+date: 2025-07-05
 updated: "2025-07-15T09:22"
 title: "Part 2: Using AI to Improve Requirements—BRDs, User Stories, and Use Cases"
 description: Learn how AI tools enhance project requirements through automated analysis of BRDs, user stories, and use cases, improving clarity and business alignment.
@@ -18,6 +18,7 @@ tags:
   - machine_learning
   - agile
 publish: "true"
+series: ["AI in Agile Project Management"]
 ---
 
 Project requirements are the DNA of successful product development, forming the foundation for everything from project timelines to team roles. But in practice, requirements documents like Business Requirements Documents (BRDs), user stories, and use cases are often plagued by vagueness, inconsistency, and even critical omissions. This challenge is especially present in agile environments, where requirements evolve quickly, and the pressure to produce lean, adaptable documentation can sometimes lead to gaps that end up derailing projects.

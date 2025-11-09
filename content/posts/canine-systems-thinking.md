@@ -1,6 +1,6 @@
 ---
-created: "2025-07-08T11:03"
-date: 2025-07-08
+created: "2025-07-11T11:03"
+date: 2025-07-11
 updated: "2025-07-11T17:27"
 title: What My Dogs Taught Me About Systems Thinking
 description: Discover how my two dogs taught their human about real systems thinking, feedback loops, and the art of elegant problem-solving in software development.

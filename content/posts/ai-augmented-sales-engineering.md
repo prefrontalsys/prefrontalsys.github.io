@@ -1,6 +1,6 @@
 ---
 created: "2025-07-08T10:38"
-date: 2025-07-08
+date: 2025-07-15
 updated: "2025-07-15T09:45"
 title: AI-Augmented Sales Engineering
 description: Explore how AI is transforming sales engineering in SaaS, enhancing client interactions, and balancing automation with human expertise for better business outcomes.

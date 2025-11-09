@@ -4,6 +4,9 @@ public/
 resources/_gen/
 data/
 
+# Frontmatter CMS
+frontmatter.json
+
 # Backup directories and files
 *_backup/
 *.bak
