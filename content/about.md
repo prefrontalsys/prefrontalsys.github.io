@@ -47,4 +47,4 @@ Our approach prioritizes:
 
 ## Contact
 
-**All Enquiries**: scampbell@prefrontal.systems
+**All Enquiries**: <span class="email-text" data-user="scampbell" data-domain="prefrontal.systems"></span>

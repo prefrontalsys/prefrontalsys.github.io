@@ -1,0 +1,24 @@
+{{ with .Site.Params.social }}
+<ul>
+  {{ range sort . "weight" }}
+    {{ if .icon }}
+      <li>
+        {{- if eq .name "Email" -}}
+          {{/* Obfuscated email link */}}
+          <a href="#" class="email-link" data-user="scot" data-domain="prefrontal.systems" aria-label="{{ .name }}" {{ if .rel }}rel="{{ .rel }}"{{ end }} {{ if .target }}target="{{ .target }}"{{ end }} {{ if .type }}type="{{ .type }}"{{ end }}>
+            <i class="{{ .icon }}" aria-hidden="true"></i>
+          </a>
+        {{- else -}}
+          <a href="{{ .url | safeURL }}" aria-label="{{ .name }}" {{ if .rel }}rel="{{ .rel }}"{{ end }} {{ if .target }}target="{{ .target }}"{{ end }} {{ if .type }}type="{{ .type }}"{{ end }}>
+            <i class="{{ .icon }}" aria-hidden="true"></i>
+          </a>
+        {{- end -}}
+      </li>
+    {{ else }}
+      <li>
+        <a href="{{ .url | safeURL }}" aria-label="{{ .name }}" {{ if .rel }}rel="{{ .rel }}"{{ end }} {{ if .target }}target="{{ .target }}"{{ end }}>{{ .name }}</a>
+      </li>
+    {{ end }}
+  {{ end }}
+</ul>
+{{ end }}

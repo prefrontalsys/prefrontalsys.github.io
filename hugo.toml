@@ -17,7 +17,7 @@ pygmentsCodeFencesGuessSyntax = true
 enableEmoji = true
 
 [params]
-  author = 'Prefrontal Systems'
+  author = 'PREFRONTAL SYSTEMS'
   description = 'Cognitive architecture for reliable AI systems'
   keywords = 'computational therapeutics, AI reliability, model welfare, STOPPER protocol, PrefrontalOS, executive function, DBT, CBT, AI research'
   info = [' ','Cognitive architecture for reliable AI systems', 'AI Behavioral Research', 'Model Welfare']
@@ -31,6 +31,12 @@ enableEmoji = true
 
   # Brand colors (from brand.md)
   colorScheme = 'auto'
+
+  # Custom JavaScript for email obfuscation
+  customJS = ['js/email-obfuscate.js']
+
+  # Custom CSS
+  customCSS = ['css/contact-form.css']
 
   # Social links
   [[params.social]]

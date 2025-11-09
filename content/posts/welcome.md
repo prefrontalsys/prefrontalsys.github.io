@@ -41,7 +41,7 @@ All our work is open source under permissive licenses (Apache 2.0 for code, CC-B
 - Collaboration proposals
 - Questions and discussions
 
-Follow our work on [GitHub](https://github.com/prefrontal-systems) or reach out via [email](mailto:scot@prefrontal.systems).
+Follow our work on [GitHub](https://github.com/prefrontal-systems) or <a href="#" class="email-link" data-user="scot" data-domain="prefrontal.systems">reach out via email</a>.
 
 ---
 

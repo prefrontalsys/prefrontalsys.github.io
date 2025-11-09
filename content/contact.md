@@ -9,20 +9,13 @@ draft: false
 ### Research Inquiries
 For academic collaboration, research questions, or scientific discussions:
 
-**Email**: scot@prefrontal.systems
+**Email**: <a href="#" class="email-link" data-user="research" data-domain="prefrontal.systems"></a>
 **ORCID**: [0009-0000-6579-2895](https://orcid.org/0009-0000-6579-2895)
 
 ### Consulting & Commercial
 For implementation consulting, framework training, or AI reliability audits:
 
-**Email**: contact@prefrontalsys.com
-**Website**: [prefrontalsys.com](https://prefrontalsys.com) *(coming soon)*
-
-### Platform & Technical Support
-For questions about PrefrontalOS, MCP servers, or technical integration:
-
-**Email**: support@prefrontalsys.ai
-**Documentation**: [prefrontalsys.ai/docs](https://prefrontalsys.ai/docs) *(coming soon)*
+**Email**: <a href="#" class="email-link" data-user="contact" data-domain="prefrontal.systems"></a>
 
 ### Open Source & GitHub
 For bug reports, feature requests, or contributions:
@@ -42,8 +35,15 @@ Charlotte, NC, USA
 ## Social & Professional
 
 - **GitHub**: [@prefrontal-systems](https://github.com/prefrontal-systems)
-- **Personal GitHub**: [@mnemexai](https://github.com/mnemexai)
-- **Blog**: [simpleminded.bot](https://simpleminded.bot)
+- **Personal GitHub**: [@prefrontalsys](https://github.com/prefrontalsys)
+
+---
+
+## Contact Form
+
+Prefer to use a form? Send us a message directly:
+
+{{< contact-form >}}
 
 ---
 
