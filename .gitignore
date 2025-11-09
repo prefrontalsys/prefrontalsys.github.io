@@ -55,3 +55,6 @@ tmp/
 temp/
 *.tmp
 
+
+# Internal brand/strategy documents
+brand.md
