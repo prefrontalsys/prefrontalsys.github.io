@@ -21,7 +21,7 @@ enableEmoji = true
   description = 'Cognitive architecture for reliable AI systems'
   keywords = 'computational therapeutics, AI reliability, model welfare, STOPPER protocol, PrefrontalOS, executive function, DBT, CBT, AI research'
   info = [' ','Cognitive architecture for reliable AI systems', 'AI Behavioral Research', 'Model Welfare']
-  avatarURL = 'images/brain-graph.png'
+  avatarURL = 'images/brain-graph-whitebg-logo.png'
 
   # Brand colors (from brand.md)
   colorScheme = 'auto'
@@ -55,9 +55,9 @@ enableEmoji = true
     url = 'about/'
 
   [[languages.en.menu.main]]
-    name = 'What we do'
+    name = 'Services'
     weight = 1
-    url = 'research-consulting/'
+    url = 'services/'
 
   [[languages.en.menu.main]]
     name = 'Projects'
