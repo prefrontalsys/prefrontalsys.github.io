@@ -6,7 +6,7 @@
    id="svg150"
    sodipodi:docname="brain-graph-whitebg-circle.svg"
    inkscape:version="1.4.2 (ebf0e940, 2025-05-08)"
-   inkscape:export-filename="brain-graph-whitebg-logo.png"
+   inkscape:export-filename="../GitHub/organizations/prefrontal-systems/prefrontalsys.github.io/static/images/brain-graph-whitebg-circle.png"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -26,7 +26,7 @@
      inkscape:deskcolor="#d1d1d1"
      showgrid="false"
      inkscape:zoom="0.640625"
-     inkscape:cx="640"
+     inkscape:cx="639.21951"
      inkscape:cy="639.21951"
      inkscape:window-width="1712"
      inkscape:window-height="1044"
@@ -37,11 +37,6 @@
   <g
      id="g158"
      transform="translate(-134.78046,-67.658508)">
-    <path
-       d="m 274.78044,207.65851 c 330,0 660,0 1000.00006,0 0,330 0,660 0,999.99999 -330.00006,0 -660.00006,0 -1000.00006,0 0,-329.99999 0,-659.99999 0,-999.99999 z"
-       fill="#fefefe"
-       id="path1"
-       style="stroke-width:0.78125" />
     <circle
        style="fill:#4d4d4d;stroke-width:1.37366"
        id="path156"
