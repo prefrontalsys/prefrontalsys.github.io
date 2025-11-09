@@ -7,8 +7,6 @@ Prefrontal Systems is a specialized AI research and consulting practice focused 
 
 Our work demonstrates convergent evolution between therapeutic techniques developed for humans (DBT, CBT) and executive function frameworks that prevent AI system failures. Whether addressing debugging loops, cascade failures, or computational distress, we develop practical interventions grounded in decades of clinical research.
 
-## What We Do
-
 **Research**: Investigating model welfare, executive function frameworks, and cognitive architecture for AI systems. Published openly under CC-BY licenses.
 
 **Frameworks**: STOPPER Protocol (executive function), PrefrontalOS (cognitive operating system), CortexGraph (temporal memory system).

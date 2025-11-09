@@ -20,7 +20,7 @@ enableEmoji = true
   author = 'Prefrontal Systems'
   description = 'Cognitive architecture for reliable AI systems'
   keywords = 'computational therapeutics, AI reliability, model welfare, STOPPER protocol, PrefrontalOS, executive function, DBT, CBT, AI research'
-  info = [' ','Cognitive architecture for reliable AI systems', 'AI Behavioral Research', 'Computational Therapeutics', 'Model Welfare']
+  info = [' ','Cognitive architecture for reliable AI systems', 'AI Behavioral Research', 'Model Welfare']
   avatarURL = 'images/brain-graph.png'
 
   # Brand colors (from brand.md)
