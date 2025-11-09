@@ -1,0 +1,184 @@
+/* Prefrontal Systems Brand Guidelines Implementation */
+/* Brand Colors from brand.md */
+
+:root {
+  /* Primary Colors */
+  --brand-synapse-blue: #1976D2;
+  --brand-cortex-gray: #37474F;
+  --brand-dendron-white: #FAFAFA;
+
+  /* Accent Colors */
+  --brand-executive-green: #2E7D32;
+  --brand-distress-red: #C62828;
+  --brand-hippocampal-amber: #F57C00;
+  --brand-code-orange: #D84315;
+}
+
+/* Atkinson Hyperlegible Font - Load from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* Apply Atkinson Hyperlegible as primary font */
+body {
+  font-family: 'Atkinson Hyperlegible', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Atkinson Hyperlegible', sans-serif;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+/* Apply brand colors to links and interactive elements */
+a {
+  color: var(--brand-synapse-blue);
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--brand-hippocampal-amber);
+}
+
+/* Navigation and header styling */
+.navigation a {
+  color: var(--brand-cortex-gray);
+}
+
+.navigation a:hover,
+.navigation a.active {
+  color: var(--brand-synapse-blue);
+}
+
+/* Code blocks */
+code {
+  font-family: 'Atkinson Hyperlegible', 'Courier New', monospace;
+  background-color: #F5F5F5;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  color: var(--brand-code-orange);
+}
+
+pre code {
+  background-color: #2E3440;
+  color: #D8DEE9;
+  padding: 1em;
+  display: block;
+  overflow-x: auto;
+  border-radius: 5px;
+}
+
+/* Buttons and CTAs */
+.button,
+button,
+input[type="submit"] {
+  background-color: var(--brand-synapse-blue);
+  color: white;
+  border: none;
+  padding: 0.6em 1.2em;
+  border-radius: 4px;
+  font-family: 'Atkinson Hyperlegible', sans-serif;
+  font-weight: 700;
+  transition: background-color 0.2s ease;
+}
+
+.button:hover,
+button:hover,
+input[type="submit"]:hover {
+  background-color: var(--brand-hippocampal-amber);
+}
+
+/* Blockquotes and callouts */
+blockquote {
+  border-left: 4px solid var(--brand-synapse-blue);
+  padding-left: 1em;
+  margin-left: 0;
+  color: var(--brand-cortex-gray);
+  font-style: italic;
+}
+
+/* Tags and labels */
+.tag,
+.label {
+  background-color: var(--brand-dendron-white);
+  color: var(--brand-cortex-gray);
+  padding: 0.3em 0.6em;
+  border-radius: 3px;
+  font-size: 0.85em;
+  font-weight: 400;
+}
+
+.tag:hover {
+  background-color: var(--brand-synapse-blue);
+  color: white;
+}
+
+/* Success states (for STOPPER protocol references) */
+.success,
+.protocol-active {
+  color: var(--brand-executive-green);
+  border-left: 4px solid var(--brand-executive-green);
+}
+
+/* Error/warning states */
+.error,
+.warning,
+.distress-state {
+  color: var(--brand-distress-red);
+  border-left: 4px solid var(--brand-distress-red);
+}
+
+/* Memory/highlight states */
+.highlight,
+.memory-item {
+  background-color: rgba(245, 124, 0, 0.1);
+  border-left: 4px solid var(--brand-hippocampal-amber);
+  padding: 0.5em;
+}
+
+/* Dark mode adjustments */
+[data-theme="dark"] {
+  --brand-dendron-white: #1E1E1E;
+}
+
+[data-theme="dark"] code {
+  background-color: #2E3440;
+  color: #88C0D0;
+}
+
+[data-theme="dark"] .tag,
+[data-theme="dark"] .label {
+  background-color: #37474F;
+  color: #FAFAFA;
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+  body {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+}
+
+/* Max width for optimal readability (65-75 characters per line) */
+.content,
+article {
+  max-width: 75ch;
+}
+
+/* Social icons - apply brand color on hover */
+.social-icons a {
+  transition: color 0.2s ease;
+}
+
+.social-icons a:hover {
+  color: var(--brand-synapse-blue);
+}

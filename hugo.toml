@@ -1,0 +1,89 @@
+baseURL = 'https://prefrontal.systems/'
+languageCode = 'en-us'
+title = 'Prefrontal Systems'
+theme = 'hugo-coder'
+defaultContentLanguage = 'en'
+
+# Pagination
+[pagination]
+  pagerSize = 20
+
+# Syntax highlighting
+pygmentsStyle = 'monokai'
+pygmentsCodeFences = true
+pygmentsCodeFencesGuessSyntax = true
+
+# Enable emoji support
+enableEmoji = true
+
+[params]
+  author = 'Scot Campbell'
+  description = 'Cognitive architecture for reliable AI systems'
+  keywords = 'computational therapeutics, AI reliability, model welfare, STOPPER protocol, PrefrontalOS, executive function, DBT, CBT, AI research'
+  info = ['AI Researcher', 'Computational Therapeutics', 'Model Welfare']
+  avatarURL = 'images/pfslogo-only.png'
+
+  # Brand colors (from brand.md)
+  colorScheme = 'auto'
+
+  # Social links
+  [[params.social]]
+    name = 'GitHub'
+    icon = 'fa-brands fa-github fa-2x'
+    weight = 1
+    url = 'https://github.com/prefrontal-systems/'
+
+  [[params.social]]
+    name = 'ORCID'
+    icon = 'fa-brands fa-orcid fa-2x'
+    weight = 2
+    url = 'https://orcid.org/0009-0000-6579-2895'
+
+  [[params.social]]
+    name = 'Email'
+    icon = 'fa-solid fa-envelope fa-2x'
+    weight = 3
+    url = 'mailto:scot@prefrontal.systems'
+
+# Menu configuration
+[languages.en]
+  languageName = 'English'
+
+  [[languages.en.menu.main]]
+    name = 'About'
+    weight = 1
+    url = 'about/'
+
+  [[languages.en.menu.main]]
+    name = 'Projects'
+    weight = 2
+    url = 'projects/'
+
+  [[languages.en.menu.main]]
+    name = 'Publications'
+    weight = 3
+    url = 'publications/'
+
+  [[languages.en.menu.main]]
+    name = 'Blog'
+    weight = 4
+    url = 'posts/'
+
+  [[languages.en.menu.main]]
+    name = 'Contact'
+    weight = 5
+    url = 'contact/'
+
+# Taxonomies
+[taxonomies]
+  tag = 'tags'
+  category = 'categories'
+  series = 'series'
+
+# Markup configuration
+[markup]
+  [markup.highlight]
+    style = 'monokai'
+    lineNos = true
+    lineNumbersInTable = true
+    tabWidth = 2

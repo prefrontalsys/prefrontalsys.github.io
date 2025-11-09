@@ -1,0 +1,24 @@
+{{ define "title" }}
+  {{ .Title }} · {{ .Site.Title }}
+{{ end }}
+{{ define "content" }}
+  <section class="container list">
+    <h1 class="title">
+      <a class="title-link" href="{{ .Permalink | safeURL }}">
+        {{ .Title }}
+      </a>
+    </h1>
+
+    {{ .Content }}
+
+    <ul>
+      {{ range .Pages.ByDate }}
+        <li>
+          <span class="date">{{ .Date | time.Format (.Site.Params.dateFormat | default "January 2, 2006") }}</span>
+          <a class="title" href="{{ .Permalink | safeURL }}">{{ .Title }}</a>
+        </li>
+      {{ end }}
+    </ul>
+
+  </section>
+{{ end }}

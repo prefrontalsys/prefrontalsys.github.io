@@ -1,0 +1,56 @@
+# Hugo build artifacts and generated files
+.hugo_build.lock
+public/
+resources/_gen/
+data/
+
+# Backup directories and files
+*_backup/
+*.bak
+*.bak2
+*.backup
+*~
+
+# Obsidian vault files
+.obsidian/
+_NoteCompanion/
+.trash-*/
+.stfolder/
+.stversions/
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
+*~
+
+# Node/npm (if using for preprocessing)
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Log files
+*.log
+
+# Temporary files
+tmp/
+temp/
+*.tmp

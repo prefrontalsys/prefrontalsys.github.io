@@ -1,0 +1,27 @@
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@700&amp;display=swap');
+
+      .monogram {
+        font-family: 'Atkinson Hyperlegible', sans-serif;
+        font-weight: 700;
+        font-size: 56px;
+        fill: #37474F;
+      }
+
+      .accent-circle {
+        fill: none;
+        stroke: #1976D2;
+        stroke-width: 3;
+      }
+    </style>
+  </defs>
+
+  <!-- Circle border -->
+  <circle cx="60" cy="60" r="54" class="accent-circle"/>
+
+  <!-- PFS monogram stacked vertically -->
+  <text x="32" y="50" class="monogram">P</text>
+  <text x="32" y="85" class="monogram" style="font-size: 32px; letter-spacing: 0.1em;">FS</text>
+</svg>

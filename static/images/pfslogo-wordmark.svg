@@ -1,0 +1,37 @@
+<svg width="400" height="120" viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&amp;display=swap');
+
+      .wordmark-main {
+        font-family: 'Atkinson Hyperlegible', sans-serif;
+        font-weight: 700;
+        font-size: 48px;
+        fill: #37474F;
+        letter-spacing: -0.02em;
+      }
+
+      .wordmark-tagline {
+        font-family: 'Atkinson Hyperlegible', sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        fill: #1976D2;
+        letter-spacing: 0.05em;
+      }
+
+      .accent-mark {
+        fill: #1976D2;
+      }
+    </style>
+  </defs>
+
+  <!-- Main wordmark -->
+  <text x="20" y="55" class="wordmark-main">Prefrontal</text>
+  <text x="270" y="55" class="wordmark-main">Systems</text>
+
+  <!-- Accent underline beneath "frontal" - represents neural connection -->
+  <rect x="130" y="62" width="100" height="3" class="accent-mark" rx="1.5"/>
+
+  <!-- Tagline -->
+  <text x="20" y="90" class="wordmark-tagline">COGNITIVE ARCHITECTURE FOR RELIABLE AI</text>
+</svg>

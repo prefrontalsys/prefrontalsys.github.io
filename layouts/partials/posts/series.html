@@ -1,0 +1,21 @@
+{{ with .GetTerms "series" }}
+  {{ range . }}
+    {{ $series := . }}
+    <div class="series-box" style="background-color: var(--bg-secondary, #f5f5f5); border-left: 4px solid var(--brand-synapse-blue, #1976D2); padding: 1.5rem; margin: 2rem 0; border-radius: 4px;">
+      <h3 style="margin-top: 0; color: var(--brand-synapse-blue, #1976D2); font-size: 1.1rem;">
+        <i class="fa-solid fa-list-ol" aria-hidden="true"></i> Series: {{ .LinkTitle }}
+      </h3>
+      <ol style="margin: 1rem 0 0 0; padding-left: 1.5rem;">
+        {{ range $series.Pages.ByDate }}
+          <li style="margin-bottom: 0.5rem;">
+            {{ if eq .Permalink $.Permalink }}
+              <strong>{{ .Title }}</strong> <span style="color: var(--brand-synapse-blue, #1976D2);">← You are here</span>
+            {{ else }}
+              <a href="{{ .Permalink }}">{{ .Title }}</a>
+            {{ end }}
+          </li>
+        {{ end }}
+      </ol>
+    </div>
+  {{ end }}
+{{ end }}
