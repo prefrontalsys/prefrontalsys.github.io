@@ -21,7 +21,7 @@ enableEmoji = true
   description = 'Cognitive architecture for reliable AI systems'
   keywords = 'computational therapeutics, AI reliability, model welfare, STOPPER protocol, PrefrontalOS, executive function, DBT, CBT, AI research'
   info = ['AI Researcher', 'Computational Therapeutics', 'Model Welfare']
-  avatarURL = 'images/pfslogo-only.png'
+  avatarURL = 'images/brain-graph.png'
 
   # Brand colors (from brand.md)
   colorScheme = 'auto'
