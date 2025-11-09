@@ -55,6 +55,11 @@ enableEmoji = true
     url = 'about/'
 
   [[languages.en.menu.main]]
+    name = 'What we do'
+    weight = 1
+    url = 'research-consulting/'
+
+  [[languages.en.menu.main]]
     name = 'Projects'
     weight = 2
     url = 'projects/'
