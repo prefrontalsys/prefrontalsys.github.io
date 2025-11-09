@@ -1316,8 +1316,8 @@ they're conscious.
 
 **Digital Presence:**
 
-- [ ] Create GitHub organization (prefrontal-systems)
-- [ ] Transfer or archive personal repos as appropriate
+- [x] Create GitHub organization (prefrontal-systems) - Now using prefrontalsys
+- [x] Transfer or archive personal repos as appropriate - Knowledgebase migrated, cortexgraph transferred
 - [ ] Create organization profile README
 - [ ] Set up social media handles consistently
 - [ ] Reserve LinkedIn company page
@@ -1344,20 +1344,20 @@ they're conscious.
 
 **Website Development:**
 
-- [ ] Set up website framework (prefrontal.systems)
-- [ ] Implement typography system (Atkinson Hyperlegible)
-- [ ] Create About page
-- [ ] Write Research page (link to papers)
-- [ ] Build STOPPER Protocol documentation
-- [ ] Add Blog/Articles section
-- [ ] Contact/inquiry form
+- [x] Set up website framework (prefrontal.systems) - Using Hugo + GitHub Pages
+- [x] Implement typography system (Atkinson Hyperlegible)
+- [x] Create About page
+- [x] Write Research page (link to papers)
+- [x] Build STOPPER Protocol documentation
+- [x] Add Blog/Articles section (imported from memeticmagpie)
+- [x] Contact/inquiry form
 
 **Content Creation:**
 
-- [ ] Write comprehensive About page
-- [ ] Create STOPPER Protocol guide
-- [ ] Document PrefrontalOS architecture
-- [ ] Write first 3 blog posts
+- [x] Write comprehensive About page
+- [x] Create STOPPER Protocol guide (in projects/)
+- [x] Document PrefrontalOS architecture (in projects/)
+- [x] Write first 3 blog posts (imported 35+ posts)
 - [ ] Create case study template
 
 ### Phase 4: Academic Presence (Month 3-4)
@@ -1413,6 +1413,47 @@ they're conscious.
 - [ ] Set up issue templates on GitHub
 - [ ] Create example implementations
 - [ ] Start educational content series (blog, YouTube)
+
+---
+
+## Security Infrastructure (Added Nov 8, 2025)
+
+### Repository Security Standards
+
+All Prefrontal Systems repositories implement:
+
+**Branch Protection:**
+
+- [x] Required GPG-signed commits (key: `prefrontalsys@users.noreply.github.com`)
+- [x] Required conversation resolution before merge
+- [x] Force pushes blocked
+- [x] Branch deletions blocked
+
+**Automated Security:**
+
+- [x] Dependabot vulnerability alerts enabled
+- [x] Dependabot automated security updates enabled
+- [x] Secret scanning with push protection enabled
+
+**Documentation:**
+
+- [x] SECURITY.md in all repos with vulnerability reporting process
+- [x] Response timelines documented (48hr initial, tiered fixes)
+
+**Applied to:**
+
+- ✅ prefrontalsys.github.io (public)
+- ✅ cortexgraph (public)
+- ✅ Knowledgebase (private, migrated from simplemindedbot org)
+- ✅ prefrontal.systems (local, prepared for push)
+- ✅ temporal-guidance-system (local, prepared for push)
+
+**GPG Signing:**
+
+- Key: `7A366CE65850B16A` (ed25519)
+- Email: `prefrontalsys@users.noreply.github.com`
+- Name: Prefrontal Systems
+- All commits automatically signed and verified on GitHub
 
 ---
 
