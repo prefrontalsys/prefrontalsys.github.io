@@ -23,6 +23,12 @@ enableEmoji = true
   info = [' ','Cognitive architecture for reliable AI systems', 'AI Behavioral Research', 'Model Welfare']
   avatarURL = 'images/brain-graph-whitebg-circle.png'
 
+  # Favicon configuration
+  favicon_32 = '/images/favicon-32x32.png'
+  favicon_16 = '/images/favicon-16x16.png'
+  touchicon = '/images/apple-touch-icon.png'
+  manifest = '/site.webmanifest'
+
   # Brand colors (from brand.md)
   colorScheme = 'auto'
 
