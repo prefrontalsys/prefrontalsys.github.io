@@ -1,5 +1,5 @@
 ---
-title: "The AI Whisperer: How You Talk to AI Gets Things Done"
+title: "Context Matters: How You Talk to AI to Get Things Done"
 date: 2025-11-09
 draft: false
 description: "Why treating AI assistants like your development team-with clear requirements and context-matters more than most people realize"
