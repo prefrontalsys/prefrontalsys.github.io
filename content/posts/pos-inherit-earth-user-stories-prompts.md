@@ -1,6 +1,6 @@
 ---
 title: "And the POs Will Inherit the Earth: How User Stories Make You Better at AI Prompting"
-date: 2025-11-03
+date: 2025-11-01
 draft: false
 description: "Product Owners, BAs, and Solution Architects already have the perfect skillset for AI prompt engineering—they just don't know it yet"
 categories:
