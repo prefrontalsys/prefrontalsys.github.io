@@ -62,6 +62,8 @@ temp/
 # Internal brand/strategy documents
 brand/
 social/
+gemini-spec/
+claude-spec/
 prefrontal-systems.pdf
 
 .gemini/
