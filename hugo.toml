@@ -30,7 +30,8 @@ enableEmoji = true
   manifest = '/site.webmanifest'
 
   # Brand colors (from brand.md)
-  colorScheme = 'auto'
+  colorScheme = 'light'
+  hideColorSchemeToggle = true
 
   # Custom JavaScript for email obfuscation
   customJS = ['js/email-obfuscate.js']

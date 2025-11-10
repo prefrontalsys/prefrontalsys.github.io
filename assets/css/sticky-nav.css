@@ -1,28 +1,9 @@
-/* Sticky Navigation Bar */
+/* Sticky Navigation Bar - Light Mode Only */
 .navigation {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background-color: var(--bg-color, #fafafa);
+  background-color: #fafafa;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-/* Ensure proper background in dark mode */
-@media (prefers-color-scheme: dark) {
-  .navigation {
-    background-color: var(--bg-color, #212121);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-  }
-}
-
-/* Explicit dark mode class support if theme uses it */
-.dark-mode .navigation,
-[data-theme="dark"] .navigation {
-  background-color: var(--bg-color, #212121);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-/* Add smooth transition for better UX */
-.navigation {
   transition: box-shadow 0.3s ease;
 }
