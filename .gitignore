@@ -60,7 +60,8 @@ temp/
 
 
 # Internal brand/strategy documents
-brand.md
+brand/
+social/
 prefrontal-systems.pdf
 
 .gemini/
