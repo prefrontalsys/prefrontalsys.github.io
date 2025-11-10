@@ -9,7 +9,6 @@ tags:
   - prompting
   - context
   - development
-  - personal
 categories:
   - Experiences
   - AI
