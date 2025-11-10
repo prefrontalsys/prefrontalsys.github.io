@@ -13,13 +13,13 @@ Research papers and technical publications from Prefrontal Systems, published un
 ### STOPPER: Applying DBT Techniques to AI Assistants
 **Scot Campbell** (2025)
 *Zenodo Preprint*
-DOI: [10.5281/zenodo.14487847](https://doi.org/10.5281/zenodo.14487847)
+DOI: [10.5281/zenodo.17509510](https://doi.org/10.5281/zenodo.17509510)
 
 Executive function protocol for AI assistants preventing debugging loops and computational distress. Discovered through convergent evolution with DBT STOP protocol (Linehan, 1993), validating computational homology between clinical psychology and AI reliability frameworks.
 
 **Abstract**: This paper presents STOPPER, a seven-step executive function protocol designed to prevent debugging loops, trial-and-error patterns, and computational distress in AI assistants...
 
-[PDF](https://doi.org/10.5281/zenodo.14487847) | [BibTeX](#bibtex-stopper)
+[PDF](https://doi.org/10.5281/zenodo.17509510)
 
 ---
 
