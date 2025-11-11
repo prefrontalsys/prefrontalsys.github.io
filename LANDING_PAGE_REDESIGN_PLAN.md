@@ -397,6 +397,397 @@ Keep prose in `_index.md`, template pulls it via `.Content`:
 
 ---
 
+## Static Site & GitHub Pages Considerations
+
+### Static Site Architecture (Hugo)
+
+**Critical Understanding**: Hugo is a static site generator - all "dynamic" content is generated at **build time**, not runtime.
+
+#### Build-Time vs. Runtime
+- **Build Time** (Hugo generates HTML):
+  - Content queries (`where`, `range`, `first`)
+  - Template logic and conditionals
+  - Data file processing
+  - Asset processing (SCSS, minification)
+  - All page generation
+
+- **No Runtime** (browser only serves static files):
+  - No server-side logic
+  - No database queries
+  - No dynamic content updates without rebuild
+  - Client-side JavaScript only for interactivity
+
+#### Implications for Landing Page
+
+1. **"Recent" Content Auto-Updates**:
+   ```go-html-template
+   {{ range first 4 (where .Site.RegularPages "Section" "posts") }}
+   ```
+   - This queries content at BUILD time
+   - New blog posts appear automatically AFTER site rebuild
+   - Not instant - requires commit → CI/CD → deploy cycle
+
+2. **Project Cards**:
+   ```go-html-template
+   {{ range where .Site.RegularPages "Section" "projects" }}
+     {{ if .Params.featured }}
+   ```
+   - Iterates through content files at BUILD time
+   - Add new project → commit → rebuild → appears on homepage
+   - No manual homepage editing required (except for new project file)
+
+3. **Publications List**:
+   - If using `data/publications.yaml`: Edit YAML → commit → rebuild
+   - If parsing markdown: Edit `publications.md` → commit → rebuild
+   - Both require redeploy to update
+
+### GitHub Pages Deployment Workflow
+
+**Current Setup** (from `.github/workflows/hugo.yml`):
+```
+Trigger: Push to main OR manual workflow dispatch
+  ↓
+GitHub Actions runner
+  ↓
+Install Hugo Extended 0.152.2
+  ↓
+Build: hugo --gc --minify --baseURL <pages-url>
+  ↓
+Deploy: Upload public/ to GitHub Pages
+  ↓
+Live site updated (1-2 minutes)
+```
+
+#### Content Update Workflow
+
+**Scenario**: Adding new blog post to homepage
+
+1. Developer creates `content/posts/new-post.md`
+2. Commit and push to `main` branch
+3. GitHub Actions triggers automatically
+4. Hugo rebuilds entire site (including homepage with new post)
+5. Deploys to `https://prefrontal.systems/`
+6. Post appears on homepage (~2 minutes total)
+
+**No manual homepage editing required** - this is the power of static site generation.
+
+#### Branch Development Workflow
+
+**For this landing page redesign**:
+
+1. Develop on branch: `claude/plan-landing-page-redesign-011CV2Fv6sznpehCmCP44g2J`
+2. Test locally: `hugo server -D` (development server with drafts)
+3. Build test: `hugo --gc --minify` (verify production build)
+4. Commit changes to branch
+5. Push to remote branch
+6. **Preview options**:
+   - Option A: Deploy branch to Netlify/Vercel preview (if configured)
+   - Option B: Build locally, inspect `public/` directory
+   - Option C: Merge to `main` (production deployment)
+7. Merge to `main` → automatic GitHub Pages deployment
+
+### Asset Handling for Static Sites
+
+#### Base URL Configuration
+**File**: `hugo.toml`
+```toml
+baseURL = 'https://prefrontal.systems/'
+```
+
+**Critical for GitHub Pages**:
+- All asset paths generated relative to baseURL
+- Images: `/images/logo.png` → `https://prefrontal.systems/images/logo.png`
+- CSS: `/css/style.css` → `https://prefrontal.systems/css/style.css`
+- Links: `/projects/` → `https://prefrontal.systems/projects/`
+
+#### Assets Directory Structure
+
+**Hugo asset processing** (goes through Hugo Pipes):
+```
+assets/
+├── css/
+│   ├── hero.css
+│   ├── project-cards.css
+│   └── ...
+└── js/
+    └── email-obfuscate.js
+```
+- Processed by Hugo (minification, concatenation)
+- Output to `public/` with hashed filenames (cache busting)
+- Referenced via `{{ $style := resources.Get "css/hero.css" | minify }}`
+
+**Static files** (copied as-is):
+```
+static/
+├── images/
+│   ├── brain-graph-whitebg-circle.png
+│   └── ...
+├── favicon.ico
+└── site.webmanifest
+```
+- Copied directly to `public/` root
+- No processing, no cache busting
+- URL: `/images/logo.png` (served from `public/images/logo.png`)
+
+#### CSS Loading Strategy for Landing Page
+
+**In `hugo.toml`**:
+```toml
+[params]
+  customCSS = [
+    'css/contact-form.css',
+    'css/sticky-nav.css',
+    'css/landing-page.css',    # NEW: Master layout
+    'css/hero.css',            # NEW
+    'css/project-cards.css',   # NEW
+    'css/publications.css',    # NEW
+    'css/blog-cards.css',      # NEW
+    'css/offerings.css'        # NEW
+  ]
+```
+
+**Theme template loads these via**:
+```go-html-template
+{{ range .Site.Params.customCSS }}
+  {{ $style := resources.Get (printf "css/%s" .) | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
+{{ end }}
+```
+
+- Hugo processes: `assets/css/hero.css`
+- Minifies and adds fingerprint: `hero.min.abc123.css`
+- Output to: `public/css/hero.min.abc123.css`
+- Automatic cache busting on content change
+
+### GitHub Pages Specifics
+
+#### Deployment Location
+- **Repo**: `https://github.com/prefrontalsys/prefrontalsys.github.io`
+- **Branch for Pages**: `main` (via GitHub Actions)
+- **Build directory**: `public/` (Hugo output)
+- **Live URL**: `https://prefrontal.systems/` (custom domain)
+
+#### GitHub Actions Build
+
+**Workflow file**: `.github/workflows/hugo.yml`
+
+Key considerations for landing page:
+1. **Hugo Extended version required**: 0.152.2 (for SCSS processing)
+2. **Build command**: `hugo --gc --minify --baseURL "${{ steps.pages.outputs.base_url }}"`
+3. **Artifact upload**: Entire `public/` directory
+4. **Deploy to Pages**: Automatic via workflow
+
+#### Custom Domain (prefrontal.systems)
+
+- DNS configured externally (CNAME to `prefrontalsys.github.io`)
+- GitHub Pages serves via custom domain
+- `baseURL` in `hugo.toml` matches custom domain
+- HTTPS via GitHub Pages certificate
+
+### Preview & Staging Considerations
+
+**Challenge**: GitHub Pages only deploys from `main` branch (in current config)
+
+**Preview options for landing page testing**:
+
+1. **Local Hugo server** (recommended for development):
+   ```bash
+   hugo server -D
+   # Live reload at http://localhost:1313
+   # Instant feedback on changes
+   ```
+
+2. **Local production build**:
+   ```bash
+   hugo --gc --minify
+   # Check public/ directory
+   # Open public/index.html in browser
+   ```
+
+3. **Branch preview services** (optional setup):
+   - Netlify Deploy Previews (PR-based)
+   - Vercel GitHub integration
+   - Cloudflare Pages (branch deployments)
+   - Requires additional configuration
+
+4. **GitHub Pages branch deployment** (alternative):
+   - Modify workflow to deploy branches to subpaths
+   - Example: `https://prefrontal.systems/preview/branch-name/`
+   - Requires workflow changes
+
+**Recommendation for this project**: Use local Hugo server for development, build test before merging to `main`.
+
+### Performance Considerations for Static Sites
+
+#### Advantages
+- **Fast page loads**: Pre-generated HTML (no server rendering)
+- **CDN-friendly**: All static assets cacheable
+- **Scalable**: GitHub Pages CDN handles traffic spikes
+- **Reliable**: No database or server failures
+
+#### Optimizations for Landing Page
+
+1. **CSS Minification** (automatic via Hugo Pipes):
+   ```go-html-template
+   {{ $style := resources.Get "css/landing-page.css" | minify | fingerprint }}
+   ```
+
+2. **Asset Fingerprinting** (cache busting):
+   - Hugo generates: `style.min.abc123.css`
+   - Browser caches indefinitely
+   - Content change → new fingerprint → cache invalidated
+
+3. **Image Optimization** (future enhancement):
+   - Hugo Image Processing for responsive images
+   - WebP format conversion
+   - Lazy loading attributes
+
+4. **Critical CSS** (optional):
+   - Inline hero section CSS in `<head>`
+   - Defer non-critical styles
+
+### Content Management Workflow
+
+**Adding new content that appears on landing page**:
+
+#### Scenario 1: New Blog Post
+```bash
+# Create post
+hugo new posts/new-topic.md
+
+# Edit content in content/posts/new-topic.md
+# Set draft: false when ready
+
+# Commit and push
+git add content/posts/new-topic.md
+git commit -m "Add blog post: New Topic"
+git push origin main
+
+# GitHub Actions builds site
+# Post appears on homepage automatically (top 4 recent)
+```
+
+#### Scenario 2: New Project
+```bash
+# Create project page
+hugo new projects/new-project.md
+
+# Edit content, add to front matter:
+# featured: true
+# weight: 1
+
+# Commit and push
+git add content/projects/new-project.md
+git commit -m "Add project: New Project"
+git push origin main
+
+# GitHub Actions builds site
+# Project card appears on homepage automatically
+```
+
+#### Scenario 3: New Publication
+**Option A** (data file approach):
+```bash
+# Edit data/publications.yaml
+# Add new entry with featured: true
+
+# Commit and push
+git add data/publications.yaml
+git commit -m "Add publication: Paper Title"
+git push origin main
+
+# GitHub Actions builds site
+# Publication appears on homepage
+```
+
+**Key point**: Homepage template queries this content at build time, so updates propagate automatically after rebuild.
+
+### Static Site Limitations & Mitigations
+
+#### Limitation 1: No Real-Time Updates
+**Issue**: Content changes not instant (requires rebuild)
+**Impact**: Homepage shows recent posts/publications with ~2 minute delay
+**Mitigation**: Acceptable for blog/research content (not time-critical)
+
+#### Limitation 2: No Server-Side Logic
+**Issue**: Can't personalize content per visitor
+**Impact**: All visitors see same homepage
+**Mitigation**: Not needed for company landing page
+
+#### Limitation 3: No Database Queries
+**Issue**: Can't filter/search without client-side JavaScript
+**Impact**: "Recent posts" list static (top 4 at build time)
+**Mitigation**: Hugo template logic generates correct list at build time
+
+#### Limitation 4: Build Time Overhead
+**Issue**: Every content change triggers full site rebuild
+**Impact**: ~10-30 seconds per build (site dependent)
+**Mitigation**: Hugo is fast; ~35 posts + 3 projects = quick build
+
+### Testing Static Site Behavior
+
+**Verify build-time content generation**:
+
+1. **Test with different content**:
+   ```bash
+   # Add draft post
+   hugo new posts/test-post.md
+
+   # Build without drafts
+   hugo --minify
+   # Check: post NOT in public/index.html
+
+   # Build with drafts
+   hugo -D --minify
+   # Check: post IS in public/index.html
+   ```
+
+2. **Test content ordering**:
+   ```bash
+   # Check recent posts appear in date order
+   grep -A5 "recent-posts" public/index.html
+   ```
+
+3. **Test featured projects filter**:
+   ```bash
+   # Set featured: false on one project
+   # Rebuild and verify it doesn't appear on homepage
+   ```
+
+4. **Test asset paths**:
+   ```bash
+   # Build and check all paths use baseURL
+   grep -r "http://localhost" public/
+   # Should return no results (local paths only in hugo server)
+   ```
+
+### GitHub Pages Deployment Verification
+
+**Post-deployment checklist**:
+
+1. **Check live site**:
+   - Visit `https://prefrontal.systems/`
+   - Verify homepage layout renders correctly
+   - Test responsive design on mobile
+
+2. **Verify asset loading**:
+   - Open browser DevTools → Network tab
+   - Check all CSS files load (200 status)
+   - Verify fingerprinted filenames (cache busting working)
+
+3. **Check GitHub Actions**:
+   - Visit `https://github.com/prefrontalsys/prefrontalsys.github.io/actions`
+   - Verify workflow succeeded (green checkmark)
+   - Review build logs for errors
+
+4. **Test content updates**:
+   - Add a test blog post
+   - Push to main
+   - Wait for deployment
+   - Verify post appears on homepage
+
+---
+
 ## Testing Plan
 
 ### Local Testing Checklist
