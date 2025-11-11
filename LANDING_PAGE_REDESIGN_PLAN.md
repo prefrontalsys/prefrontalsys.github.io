@@ -1203,6 +1203,368 @@ hugo server -D
 
 ---
 
+### Optional Enhancement: Shrinking Logo Navigation
+
+**Purpose**: Add smooth logo size transition on scroll for better UX
+
+**Implementation**: Add after main landing page is working
+
+---
+
+#### File 18: Create `assets/js/shrinking-nav.js`
+
+**Purpose**: JavaScript to handle scroll-based logo resizing
+
+**Dependencies**: Existing sticky navigation (already in place)
+
+**Content template**:
+```javascript
+// Shrinking Navigation Logo on Scroll
+(function() {
+  'use strict';
+
+  // Configuration
+  const SCROLL_THRESHOLD = 100; // pixels scrolled before shrinking
+  const THROTTLE_DELAY = 100;   // milliseconds between scroll checks
+
+  // Get navigation element
+  const nav = document.querySelector('.navigation');
+  if (!nav) return; // Exit if no nav found
+
+  let isScrolling = false;
+  let lastScrollY = window.scrollY;
+
+  /**
+   * Toggle 'scrolled' class based on scroll position
+   */
+  function handleScroll() {
+    const currentScrollY = window.scrollY;
+
+    if (currentScrollY > SCROLL_THRESHOLD) {
+      nav.classList.add('scrolled');
+    } else {
+      nav.classList.remove('scrolled');
+    }
+
+    lastScrollY = currentScrollY;
+    isScrolling = false;
+  }
+
+  /**
+   * Throttled scroll event listener
+   * Only runs handleScroll every THROTTLE_DELAY ms
+   */
+  function onScroll() {
+    if (!isScrolling) {
+      isScrolling = true;
+      setTimeout(handleScroll, THROTTLE_DELAY);
+    }
+  }
+
+  // Initialize on page load
+  handleScroll();
+
+  // Attach scroll listener
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  // Handle page visibility changes (e.g., returning to tab)
+  document.addEventListener('visibilitychange', function() {
+    if (!document.hidden) {
+      handleScroll();
+    }
+  });
+
+})();
+```
+
+**Validation**:
+```bash
+# Check file exists
+ls -la assets/js/shrinking-nav.js
+
+# Test JavaScript syntax (Hugo won't validate JS)
+# Use browser console or node
+node -c assets/js/shrinking-nav.js
+```
+
+**Success criteria**:
+- No syntax errors
+- Throttled scroll listener (performance)
+- Adds/removes 'scrolled' class
+- Handles edge cases (page visibility)
+
+---
+
+#### File 19: Update `assets/css/sticky-nav.css`
+
+**Purpose**: Add CSS transitions for logo size change
+
+**Action**: Add logo transition styles to existing sticky-nav.css
+
+**Changes to append**:
+```css
+/* Shrinking Logo Navigation Enhancement */
+
+.navigation {
+  transition: padding 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navigation .nav-logo {
+  transition: all 0.3s ease;
+  height: 60px; /* Default logo height */
+  width: auto;
+}
+
+.navigation .nav-logo img {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Scrolled state - smaller logo */
+.navigation.scrolled {
+  padding: 0.5rem 1rem; /* Reduce nav padding */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Add shadow when scrolled */
+}
+
+.navigation.scrolled .nav-logo {
+  height: 40px; /* Smaller logo height when scrolled */
+}
+
+/* Optional: Hide logo text, show only icon when scrolled */
+.navigation .logo-text {
+  display: inline;
+  margin-left: 0.5rem;
+  transition: opacity 0.3s ease;
+}
+
+.navigation.scrolled .logo-text {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .navigation .nav-logo {
+    height: 50px; /* Smaller default on mobile */
+  }
+
+  .navigation.scrolled .nav-logo {
+    height: 36px; /* Even smaller when scrolled on mobile */
+  }
+}
+```
+
+**Alternative: If logo is text-based (not image)**:
+```css
+/* Text-based logo alternative */
+.navigation .site-title {
+  font-size: 1.5rem;
+  transition: font-size 0.3s ease;
+}
+
+.navigation.scrolled .site-title {
+  font-size: 1.2rem;
+}
+```
+
+**Validation**:
+```bash
+# Verify CSS syntax
+hugo --gc
+
+# Test in browser
+hugo server -D
+# Scroll page and watch logo shrink
+```
+
+**Success criteria**:
+- Smooth logo size transition
+- Navigation padding adjusts
+- No layout shifts or jank
+- Works on mobile and desktop
+
+---
+
+#### File 20: Update `hugo.toml` (JavaScript)
+
+**Purpose**: Load shrinking navigation JavaScript
+
+**Action**: Add new JS file to customJS array
+
+**Changes**:
+```toml
+[params]
+  # ... existing params ...
+
+  customJS = [
+    'js/email-obfuscate.js',
+    'js/shrinking-nav.js'    # ADD THIS
+  ]
+```
+
+**Validation**:
+```bash
+# Verify TOML syntax
+hugo --gc --minify
+
+# Check JS loads in browser
+hugo server -D
+# Open DevTools → Network → Filter JS
+# Verify shrinking-nav.js loads
+# Check Console for any errors
+```
+
+**Success criteria**:
+- JavaScript file loads successfully
+- No console errors
+- Scroll functionality works
+- Logo transitions smoothly
+
+---
+
+### Testing Shrinking Logo Feature
+
+**Manual test sequence**:
+
+1. **Desktop test**:
+   ```bash
+   hugo server -D
+   ```
+   - Load homepage at http://localhost:1313/
+   - Logo should be full size (60px)
+   - Scroll down 100px
+   - Logo should shrink to 40px smoothly
+   - Scroll back to top
+   - Logo should grow back to 60px
+
+2. **Mobile test** (DevTools):
+   - Toggle device toolbar (320px width)
+   - Logo starts at 50px
+   - Scroll down
+   - Logo shrinks to 36px
+   - Navigation remains usable
+
+3. **Performance check**:
+   - Open DevTools → Performance tab
+   - Start recording
+   - Scroll up and down rapidly
+   - Stop recording
+   - Verify: No layout thrashing, smooth 60fps
+
+4. **Browser compatibility**:
+   - Test in Chrome, Firefox, Safari
+   - Verify transitions work in all browsers
+   - Check mobile Safari (iOS)
+
+**Common issues**:
+
+- **Logo doesn't shrink**:
+  - Check `.navigation` class exists on nav element
+  - Verify JS file loads (Network tab)
+  - Check console for errors
+
+- **Janky animation**:
+  - Ensure using CSS transitions, not JavaScript animation
+  - Add `will-change: transform` to logo if needed
+  - Check scroll listener is throttled
+
+- **Logo flickers**:
+  - Verify scroll threshold (100px) isn't too low
+  - Check for competing CSS rules
+  - Ensure no conflicting JavaScript
+
+---
+
+### Updated File Count
+
+**Total files: 20 (was 17)**
+
+Added:
+- File 18: `assets/js/shrinking-nav.js` (new)
+- File 19: `assets/css/sticky-nav.css` (update)
+- File 20: `hugo.toml` (update for JS)
+
+**Updated execution order**:
+1. Files 1-17: Core landing page (as before)
+2. Files 18-20: Shrinking logo enhancement (optional but recommended)
+
+---
+
+### Updated Post-Implementation Checklist
+
+Before committing:
+
+- [ ] All 20 files created/updated
+- [ ] `hugo --gc --minify` succeeds with no errors
+- [ ] `hugo server -D` runs and homepage loads
+- [ ] All 5 sections visible on homepage
+- [ ] 3 project cards render correctly
+- [ ] Publications section shows at least 1 paper
+- [ ] 4 blog post cards display
+- [ ] All internal links work
+- [ ] Responsive design works at 320px, 768px, 1024px
+- [ ] CSS files load (check DevTools Network tab)
+- [ ] JavaScript files load (check DevTools Network tab)
+- [ ] No console errors in browser
+- [ ] **Shrinking logo works on scroll** ✨ NEW
+- [ ] **Logo transitions are smooth (no jank)** ✨ NEW
+- [ ] Production build creates `public/index.html`
+- [ ] File sizes reasonable (index.html < 50KB)
+
+---
+
+### Updated Git Commit Strategy
+
+**With shrinking logo feature**:
+
+```bash
+# Option A: Separate commit for enhancement
+git add assets/ layouts/ content/projects/ data/ hugo.toml
+git commit -m "Implement new landing page with hero, projects, publications, and blog sections
+
+- Add 6 CSS files for component styling
+- Create 5 Hugo partials for reusable components
+- Build custom layouts/index.html template
+- Update project front matter with featured flags
+- Add structured publications data file
+- Configure CSS loading in hugo.toml
+
+Responsive design: mobile-first, 3 breakpoints (320px, 768px, 1024px)
+Brand colors from brand.md applied throughout"
+
+# Then add shrinking nav as second commit
+git add assets/js/shrinking-nav.js assets/css/sticky-nav.css hugo.toml
+git commit -m "Add shrinking logo navigation enhancement
+
+- Implement scroll-based logo size transition
+- Logo shrinks from 60px to 40px after 100px scroll
+- Smooth CSS transitions with performance throttling
+- Mobile responsive (50px → 36px)
+- No layout shift or jank"
+
+# Option B: Single commit with everything
+git add assets/ layouts/ content/projects/ data/ hugo.toml
+git commit -m "Implement new landing page with shrinking logo navigation
+
+Landing page features:
+- Add 6 CSS files for component styling
+- Create 5 Hugo partials for reusable components
+- Build custom layouts/index.html template
+- Update project front matter with featured flags
+- Add structured publications data file
+
+Shrinking logo navigation:
+- Scroll-based logo size transition (60px → 40px)
+- Throttled scroll listener for performance
+- Smooth CSS animations with mobile support
+
+Responsive design: mobile-first, 3 breakpoints (320px, 768px, 1024px)
+Brand colors from brand.md applied throughout"
+```
+
+---
+
 ### Validation & Testing Sequence
 
 #### Step 1: Syntax Validation
