@@ -1,0 +1,11 @@
+# Features Directory (Legacy)
+
+This directory is maintained for backward compatibility but is no longer the primary location for feature specifications.
+
+**Current Workflow**: New features should be created in `.specify/specs/` using the `create-new-feature.sh` script:
+
+```bash
+.specify/scripts/bash/create-new-feature.sh --number 1 --short-name "my-feature" "Feature description"
+```
+
+This script will automatically create a structured directory under `.specify/specs/` with spec.md, plan.md, tasks.md, and checklists/.
