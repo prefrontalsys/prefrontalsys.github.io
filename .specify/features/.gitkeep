@@ -1,0 +1,11 @@
+# Features Directory
+
+This directory contains active feature specifications, plans, tasks, and checklists.
+
+When starting a new feature:
+1. Copy templates from ../templates/
+2. Rename with feature name (e.g., landing-page-redesign-spec.md)
+3. Fill out specification first, then plan, then tasks
+4. Use checklist throughout implementation
+
+Completed features can be archived or deleted after successful deployment.
