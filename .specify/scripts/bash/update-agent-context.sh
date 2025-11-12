@@ -119,11 +119,11 @@ echo "Extracting technologies from plan..."
 for pattern in "${patterns[@]}"; do
     matches=$(grep -oE "$pattern" "$PLAN_FILE" 2>/dev/null | sort -u || true)
     if [[ -n "$matches" ]]; then
-        for match in $matches; do
+        while IFS= read -r match; do
             # Normalize name (remove version for deduplication key)
             name=$(echo "$match" | sed -E 's/ [0-9]+\.[0-9]+.*//')
             TECHNOLOGIES["$name"]="$match"
-        done
+        done <<< "$matches"
     fi
 done
 

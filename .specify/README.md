@@ -83,10 +83,10 @@ Use `checklist-template.md` throughout:
 
 1. **Copy templates to working directory:**
    ```bash
-   cp .specify/templates/spec-template.md .specify/features/my-feature-spec.md
-   cp .specify/templates/plan-template.md .specify/features/my-feature-plan.md
-   cp .specify/templates/tasks-template.md .specify/features/my-feature-tasks.md
-   cp .specify/templates/checklist-template.md .specify/features/my-feature-checklist.md
+   cp .specify/templates/spec-template.md .specify/specs/my-feature/spec.md
+   cp .specify/templates/plan-template.md .specify/specs/my-feature/plan.md
+   cp .specify/templates/tasks-template.md .specify/specs/my-feature/tasks.md
+   cp .specify/templates/checklist-template.md .specify/specs/my-feature/checklist.md
    ```
 
 2. **Fill out specification first** - Define what you're building and why

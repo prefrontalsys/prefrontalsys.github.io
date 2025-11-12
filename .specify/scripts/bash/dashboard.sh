@@ -146,7 +146,10 @@ for feature_dir in $FEATURES; do
     # Get feature title from spec
     title="(No title)"
     if [[ -f "$spec_file" ]]; then
-        title=$(grep "^# Feature Specification:" "$spec_file" | sed 's/# Feature Specification: //' || echo "(No title)")
+        title_line=$(grep "^# Feature Specification:" "$spec_file" || true)
+        if [[ -n "$title_line" ]]; then
+            title=$(echo "$title_line" | sed 's/# Feature Specification: //')
+        fi
     fi
 
     # Store feature data

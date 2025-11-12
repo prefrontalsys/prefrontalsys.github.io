@@ -16,7 +16,7 @@ set -euo pipefail
 
 SKIP_EXTERNAL=false
 OUTPUT_JSON=false
-TARGET="${1:-content/}"
+TARGET=""
 
 # Parse options
 while [[ $# -gt 0 ]]; do
@@ -29,12 +29,24 @@ while [[ $# -gt 0 ]]; do
             OUTPUT_JSON=true
             shift
             ;;
+        -*)
+            echo "Error: Unknown option: $1" >&2
+            exit 1
+            ;;
         *)
+            if [[ -n "$TARGET" ]]; then
+                echo "Error: Only one target file/directory is supported." >&2
+                exit 1
+            fi
             TARGET="$1"
             shift
             ;;
     esac
 done
+
+if [[ -z "$TARGET" ]]; then
+    TARGET="content/"
+fi
 
 # Validate target exists
 if [[ ! -e "$TARGET" ]]; then
@@ -84,6 +96,8 @@ for file in $MARKDOWN_FILES; do
         # Extract all links from this line
         links=$(echo "$line_content" | grep -oE '\[([^\]]+)\]\(([^)]+)\)' | sed -E 's/\[([^\]]+)\]\(([^)]+)\)/\2/g')
 
+        local OLD_IFS="$IFS"
+        IFS=$'\n'
         for link in $links; do
             # Skip anchors and mailto links
             if [[ "$link" =~ ^# ]] || [[ "$link" =~ ^mailto: ]]; then
@@ -134,6 +148,7 @@ for file in $MARKDOWN_FILES; do
                 fi
             fi
         done
+        IFS="$OLD_IFS"
     done < <(grep -n '\[.*\](.*.)' "$file" | cut -d: -f1)
 done
 

@@ -135,9 +135,9 @@ This directory contains bash scripts that support the speckit workflow commands 
    - Cursor: `.cursorrules`
    - Gemini: `.gemini/context.md`
    - Windsurf: `.windsurf/context.md`
-4. Reports technologies found (currently requires manual update)
+4. Reports technologies found and automatically updates context file
 
-**Note:** Automatic context updating is not yet implemented. Script provides guidance on manual updates.
+**Note:** This script automatically extracts technologies from the current feature's plan and merges them into the detected agent's context file.
 
 ---
 

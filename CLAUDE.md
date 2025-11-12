@@ -19,9 +19,7 @@ This is the **Prefrontal Systems website** - a Hugo-based static site hosted on 
 - Hugo 0.152.2+ (static site generator)
 - Markdown (content format)
 - Bash (scripting and automation)
-- GitHub (001-constitution-audit)
-- Actions (001-constitution-audit)
-- 0.152.2+ (001-constitution-audit)
+- GitHub Actions (001-constitution-audit)
 ## Recent Changes
 <!-- Track technology additions from features -->
 

@@ -35,13 +35,18 @@ while [[ $# -gt 0 ]]; do
             SHORT_NAME="$2"
             shift 2
             ;;
+        -*)
+            echo "Error: Unknown option $1" >&2
+            exit 1
+            ;;
         *)
-            # Remaining args are description
-            DESCRIPTION="$*"
+            # Stop parsing options, the rest is the description
             break
             ;;
     esac
 done
+
+DESCRIPTION="$*"
 
 # Validate required arguments
 if [[ -z "$FEATURE_NUMBER" ]]; then
