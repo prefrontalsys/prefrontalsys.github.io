@@ -14,15 +14,6 @@ This is the **Prefrontal Systems website** - a Hugo-based static site hosted on 
 - GitHub Pages deployment via GitHub Actions
 - w3forms for contact form handling
 
-## Active Technologies
-<!-- Technologies auto-updated by speckit workflow -->
-- Hugo 0.152.2+ (static site generator)
-- Markdown (content format)
-- Bash (scripting and automation)
-- GitHub Actions (001-constitution-audit)
-## Recent Changes
-<!-- Track technology additions from features -->
-
 ## Development Commands
 
 ### Local Development

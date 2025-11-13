@@ -66,5 +66,13 @@ gemini-spec/
 claude-spec/
 prefrontal-systems.pdf
 
+# Local AI assistant configs
 .gemini/
+.claude/
+GEMINI.md
 gha-creds-*.json
+
+# Planning and internal docs
+LANDING_PAGE_REDESIGN_PLAN.md
+*_PLAN.md
+user_story_template.md
