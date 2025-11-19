@@ -4,12 +4,12 @@ description: Complex information processing systems exhibit similar behaviors an
 draft: false
 date: 2025-11-19
 tags:
-	- DBT
-	- metacognition
-	- STOPPER
-	- convergent-evolution
+  - DBT
+  - metacognition
+  - STOPPER
+  - convergent-evolution
 categories:
-	- AI
+  - AI
 ---
 
 ## The Hook: Three Frameworks Walk Into a Bar...
