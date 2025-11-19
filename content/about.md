@@ -42,8 +42,8 @@ Our approach prioritizes:
 **Scot Campbell** is an independent AI researcher specializing in model welfare and computational therapeutics. Former Product Owner/Technical PM (2012-2025) applying systems thinking to AI reliability challenges.
 
 **ORCID**: [0009-0000-6579-2895](https://orcid.org/0009-0000-6579-2895)
-**GitHub**: [github.com/prefrontalsys](https://github.com/mnemexai)
-**Blog**: [simpleminded.bot](https://simpleminded.bot)
+**GitHub**: [github.com/prefrontalsys](https://github.com/prefrontal-systems)
+**Blog**: [prefrontal.systems](https://prefrontal.systems/posts)
 
 ## Contact
 
