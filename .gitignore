@@ -76,3 +76,6 @@ gha-creds-*.json
 LANDING_PAGE_REDESIGN_PLAN.md
 *_PLAN.md
 user_story_template.md
+
+/.quarto/
+**/*.quarto_ipynb
