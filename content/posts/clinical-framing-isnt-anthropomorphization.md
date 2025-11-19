@@ -1,5 +1,5 @@
 ---
-title: Why Clinical Framing Isn't Anthropomorphization (And Why It Matters)
+title: Clinical Framing Is Not Anthropomorphization and Why It Matters
 description: Complex information processing systems exhibit similar behaviors and dysfunctions and can benefit from similar treatment methods
 draft: false
 date: 2025-11-19
