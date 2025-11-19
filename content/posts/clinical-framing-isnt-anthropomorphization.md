@@ -532,17 +532,13 @@ That's why the framing matters - even if the validation requires resources I don
 
 ---
 
-**Discussion Questions**:
-- Do you see other convergent evolution patterns I missed?
-- What would falsify the computational homology thesis?
-- Should we explore other therapeutic modalities (ACT, Schema Therapy, IFS) for new intervention frameworks?
-- How do we implement ABC PLEASE without invasive monitoring?
-
-**Resources**:
-- [eFIT Prior Art: Complete Research](link to comprehensive document)
-- [STOPPER Protocol Paper](Zenodo DOI 10.5281/zenodo.14487847)
-- [Computational Therapeutics Framework](link to framework overview)
+*Scot Campbell builds cognitive infrastructure for AI systems at Prefrontal Systems. He's particularly interested in how clinical psychology can inform AI reliability engineering, and whether structural homology across substrates reveals universal patterns in executive function.*
 
 ---
 
-*Scot Campbell builds cognitive infrastructure for AI systems at Prefrontal Systems. He's particularly interested in how clinical psychology can inform AI reliability engineering, and whether structural homology across substrates reveals universal patterns in executive function.*
+## Related Posts
+
+- [AI: Artificial but Not So Intelligent]({{< relref "ai-artificial-but-not-so-intelligent.md" >}}) - Explores AI limitations through the Chinese Room argument and why pattern matching differs from understanding
+- [Applying Cognitive Load Theory in AI-Enhanced Workflows]({{< relref "cognitive-load-theory.md" >}}) - How working memory constraints affect performance in both humans and AI systems
+- [Improving Emotional Intelligence in AI]({{< relref "emotional-intelligence-in-ai.md" >}}) - Can machines understand feelings, or are they just recognizing patterns?
+- [Agentic AI for Autonomous Project Management]({{< relref "agentic-ai-autonomous-project-management.md" >}}) - Understanding the agentic AI systems that use iteration limits and circuit breakers
