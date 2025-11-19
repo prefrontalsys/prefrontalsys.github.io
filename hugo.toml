@@ -17,7 +17,7 @@ pygmentsCodeFencesGuessSyntax = true
 enableEmoji = true
 
 [params]
-  author = 'PREFRONTAL SYSTEMS'
+  author = 'PREFRONTAL SYSTEMS℠'
   description = 'Cognitive architecture for reliable AI systems'
   keywords = 'computational therapeutics, AI reliability, model welfare, STOPPER protocol, PrefrontalOS, executive function, DBT, CBT, AI research'
   info = ['· · · · ·','Cognitive Architecture for Reliable AI systems', 'AI Behavioral Research', 'Model Welfare']
