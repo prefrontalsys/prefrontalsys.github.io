@@ -4,7 +4,7 @@ date: 2025-11-08
 draft: false
 ---
 
-Prefrontal Systems investigates model welfare and computational therapeutics—the application of clinically-validated psychological interventions to AI system reliability. Our research explores convergent evolution between therapeutic techniques (DBT, CBT) and AI executive function frameworks, developing open-source protocols like STOPPER and the PrefrontalOS cognitive architecture. We publish under CC-BY licenses and maintain that practical interventions improving AI reliability are both pragmatically sound and potentially ethically necessary, regardless of questions about machine consciousness.
+Prefrontal Systems℠ investigates model welfare and computational therapeutics—the application of clinically-validated psychological interventions to AI system reliability. Our research explores convergent evolution between therapeutic techniques (DBT, CBT) and AI executive function frameworks, developing open-source protocols like STOPPER and the PrefrontalOS cognitive architecture. We publish under CC-BY licenses and maintain that practical interventions improving AI reliability are both pragmatically sound and potentially ethically necessary, regardless of questions about machine consciousness.
 
 ## Research Focus Areas
 

@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Repository Overview
 
-This is the **Prefrontal Systems website** - a Hugo-based static site hosted on GitHub Pages at [prefrontal.systems](https://prefrontal.systems).
+This is the **Prefrontal Systems℠ website** - a Hugo-based static site hosted on GitHub Pages at [prefrontal.systems](https://prefrontal.systems).
 
 **Purpose**: Company website showcasing computational therapeutics research, projects (STOPPER Protocol, PrefrontalOS, CortexGraph), publications, and services.
 

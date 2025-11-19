@@ -532,7 +532,7 @@ That's why the framing matters - even if the validation requires resources I don
 
 ---
 
-*Scot Campbell builds cognitive infrastructure for AI systems at Prefrontal Systems. He's particularly interested in how clinical psychology can inform AI reliability engineering, and whether structural homology across substrates reveals universal patterns in executive function.*
+*Scot Campbell builds cognitive infrastructure for AI systems at Prefrontal Systems℠. He's particularly interested in how clinical psychology can inform AI reliability engineering, and whether structural homology across substrates reveals universal patterns in executive function.*
 
 ---
 

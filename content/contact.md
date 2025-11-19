@@ -27,7 +27,7 @@ For bug reports, feature requests, or contributions:
 
 ## Office
 
-Prefrontal Systems LLC
+Prefrontal Systems℠ LLC
 Charlotte, NC, USA
 
 ---

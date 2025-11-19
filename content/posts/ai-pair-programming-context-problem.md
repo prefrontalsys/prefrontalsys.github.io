@@ -78,7 +78,7 @@ The fundamental issue: **AI pair programming operates without episodic memory**.
 
 ## The Memory Layer Solution: CortexGraph
 
-This is where CortexGraph from Prefrontal Systems enters the picture.
+This is where CortexGraph from Prefrontal Systems℠ enters the picture.
 
 CortexGraph is the memory layer of a larger cognitive stack architecture (other layers currently in design). It gives AI assistants human-like memory dynamics—information that fades naturally unless reinforced, memories that strengthen with use, automatic promotion of frequently-referenced knowledge to permanent storage.
 

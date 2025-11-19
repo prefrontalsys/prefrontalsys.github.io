@@ -4,7 +4,7 @@ date: 2025-11-08
 draft: false
 ---
 
-Research papers and technical publications from Prefrontal Systems, published under open licenses.
+Research papers and technical publications from Prefrontal Systems℠, published under open licenses.
 
 ---
 

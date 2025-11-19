@@ -1,4 +1,4 @@
-# Prefrontal Systems Website
+# Prefrontal Systems℠ Website
 
 [![Hugo](https://img.shields.io/badge/Hugo-0.152.2-blue.svg)](https://gohugo.io)
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)

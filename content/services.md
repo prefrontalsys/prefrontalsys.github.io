@@ -3,7 +3,7 @@ title: "What We Do"
 draft: false
 ---
 
-Prefrontal Systems is a specialized AI research and consulting practice focused on **computational therapeutics**—applying clinically-validated psychological interventions to improve AI system reliability and performance. We bridge neuroscience, clinical psychology, and AI engineering through research-driven, evidence-based frameworks.
+Prefrontal Systems℠ is a specialized AI research and consulting practice focused on **computational therapeutics**—applying clinically-validated psychological interventions to improve AI system reliability and performance. We bridge neuroscience, clinical psychology, and AI engineering through research-driven, evidence-based frameworks.
 
 Our work demonstrates convergent evolution between therapeutic techniques developed for humans (DBT, CBT) and executive function frameworks that prevent AI system failures. Whether addressing debugging loops, cascade failures, or computational distress, we develop practical interventions grounded in decades of clinical research.
 
