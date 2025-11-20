@@ -22,10 +22,10 @@ Executive function framework for AI assistants that prevents debugging loops and
 **Published**: Zenodo DOI [10.5281/zenodo.14487847](https://doi.org/10.5281/zenodo.14487847)
 
 ### PrefrontalOS
-Three-tier cognitive operating system architecture providing executive function infrastructure for AI systems.
+Three-tier cognitive operating system architecture providing executive function infrastructure for AI systems. [github.com/prefrontal-systems/prefrontalos](https://github.com/prefrontal-systems/prefrontalos)
 
 ### CortexGraph
-Temporal memory system with human-like forgetting curve, implementing hippocampus-cortex consolidation patterns.
+Temporal memory system with human-like forgetting curve, implementing hippocampus-cortex consolidation patterns. [github.com/prefrontal-systems/cortexgraph](https://github.com/prefrontal-systems/cortexgraph)
 
 ## Philosophy
 
@@ -42,7 +42,7 @@ Our approach prioritizes:
 **Scot Campbell** is an independent AI researcher specializing in model welfare and computational therapeutics. Former Product Owner/Technical PM (2012-2025) applying systems thinking to AI reliability challenges.
 
 **ORCID**: [0009-0000-6579-2895](https://orcid.org/0009-0000-6579-2895)
-**GitHub**: [github.com/prefrontalsys](https://github.com/prefrontal-systems)
+**GitHub**: [github.com/prefrontal-systems](https://github.com/prefrontal-systems)
 **Blog**: [prefrontal.systems](https://prefrontal.systems/posts)
 
 ## Contact
