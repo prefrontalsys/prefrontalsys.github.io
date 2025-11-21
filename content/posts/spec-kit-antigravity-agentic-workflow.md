@@ -1,5 +1,5 @@
 ---
-title: "The Handoff: How I Orchestrate AI Agents Across Specification and Implementation"
+title: "Orchestrating Agentic Workflows With GitHub Spec-Kit and Google Antigravity"
 date: 2025-11-20
 draft: false
 description: "I discovered that the real power isn't in any single AI tool - it's in teaching them to pass the baton cleanly between specification and execution"
