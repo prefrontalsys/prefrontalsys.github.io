@@ -12,6 +12,7 @@
 
   {{ $publications := site.Data.publications }}
 
+  {{ if $publications }}
   {{ range $type := slice "peer-reviewed" "preprint" "whitepaper" "technical-report" "talk" }}
   {{ $typePublications := where $publications "type" $type }}
   {{ if $typePublications }}
@@ -47,6 +48,7 @@
     </div>
     {{ end }}
   </div>
+  {{ end }}
   {{ end }}
   {{ end }}
 </section>
