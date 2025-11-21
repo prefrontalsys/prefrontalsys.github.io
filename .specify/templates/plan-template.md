@@ -30,6 +30,7 @@
 ## Constitution Check
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
+*(These checks refer to the operational principles derived from the project's main CONSTITUTION.md)*
 
 - [ ] **Reliability by Design**: Does the plan include specific measures for ensuring system reliability, such as fault tolerance, monitoring, and clear fallback strategies?
 - [ ] **Model Welfare and Ethics**: If AI models are involved, does the plan address the ethical implications and welfare of these models, consistent with our guidelines?
