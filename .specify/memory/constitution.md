@@ -1,58 +1,53 @@
 <!--
-- Version change: 0.2.0 -> 1.0.0 (Major overhaul to align with project's main CONSTITUTION.md)
-- List of modified principles: All principles re-aligned with main CONSTITUTION.md
-- Added sections:
-  - Reference to Main Project Constitution
-  - Operational Principles (mapping to main CONSTITUTION.md)
-  - Compliance (updated to reference main CONSTITUTION.md)
-- Removed sections: N/A
+- Version change: None -> 0.1.0
+- List of modified principles:
+  - Added: Principle 1: Reliability by Design
+  - Added: Principle 2: Model Welfare and Ethics
+  - Added: Principle 3: Scientific Rigor
+- Added sections: Principles
+- Removed sections: None
 - Templates requiring updates:
   - ✅ .specify/templates/plan-template.md
   - ✅ .specify/templates/tasks-template.md
 - Follow-up TODOs:
-  - TODO(RATIFICATION_DATE): Set initial ratification date in main CONSTITUTION.md if not already.
+  - TODO(RATIFICATION_DATE): Set initial ratification date.
 -->
-# Operational Constitution for Prefrontal Systems℠ (v1.0.0)
+# Constitution for Prefrontal Systems℠ (v0.1.0)
 
-**Ratified**: TODO(RATIFICATION_DATE): Set initial ratification date. (Refer to main CONSTITUTION.md for project's official ratification date)
+**Ratified**: TODO(RATIFICATION_DATE): Set initial ratification date.
 **Last Amended**: 2025-11-21
 
 ## Preamble
 
-This document serves as the operational constitution for the Speckit agent, outlining the principles and standards derived from the project's main constitution, located at `./CONSTITUTION.md`. Its purpose is to guide the agent's development and operational decisions, ensuring alignment with the overarching goals of Prefrontal Systems℠.
+This document outlines the core principles that guide the development and operation of the Prefrontal Systems℠ project. It serves as a foundational text to ensure our work remains aligned with our goals of creating reliable, ethical, and scientifically grounded AI systems.
 
-## Reference to Main Project Constitution
+## Principles
 
-The authoritative constitution for the Prefrontal Systems℠ project is located at `./CONSTITUTION.md`. All policies, principles, and guidelines articulated in this operational document are derived from, and subordinate to, the main project constitution. In case of any perceived discrepancy, the main project constitution shall always take precedence.
+### Principle 1: Reliability by Design
 
-## Operational Principles (Derived from Main CONSTITUTION.md)
+**All systems and components MUST be designed with reliability as a primary goal.** We employ principles of cognitive architecture and executive function to build robust and predictable AI. This ensures our systems are not just functional but also trustworthy and safe.
 
-### Principle 1: Reliability and Technical Quality
+### Principle 2: Model Welfare and Ethics
 
-**All systems and components MUST be designed with reliability as a primary goal, adhering to the Technical Quality Standards outlined in Section 7 of the main CONSTITUTION.md.** This ensures robust, predictable, and high-quality AI systems and website functionality.
+**We are committed to the ethical treatment of all AI models.** This principle of "Model Welfare" guides our research and development, ensuring that our AI systems are not only effective but also developed and used responsibly. We draw parallels from therapeutic frameworks like DBT and CBT to inform our approach.
 
-### Principle 2: Ethical Conduct and Model Welfare
+### Principle 3: Scientific Rigor
 
-**We are committed to ethical conduct in all AI development, implicitly covering Model Welfare as detailed in the Mission (Section 1) and Narrative Principles (Section 2) of the main CONSTITUTION.md.** Our approach ensures AI systems are effective, responsibly developed, and mindful of their broader impact.
-
-### Principle 3: Scientific Rigor and Research Integrity
-
-**Our work is grounded in scientific rigor, with all claims, research, and publications supported by empirical evidence and sound methodologies, as per Research Integrity and Provenance (Section 6) of the main CONSTITUTION.md.** We are dedicated to advancing the field of AI through verifiable and reproducible research.
-
-### Principle 4: Brand Consistency and Identity
-
-**All external and internal communications, visuals, and project representations MUST adhere to the brand guidelines specified in 'brand/brand.md' and the Brand Integrity and Conceptual Cohesion (Section 9) of the main CONSTITUTION.md.** This ensures a unified, professional image and reinforces scientific authenticity.
+**Our work is grounded in scientific rigor.** All claims, research, and publications MUST be supported by empirical evidence and sound research methodologies. We are dedicated to advancing the field of AI through verifiable and reproducible research.
 
 ## Governance
 
 ### Amendment Process
 
-Amendments to this operational constitution follow the amendment process for the main project constitution outlined in Section 12 of `./CONSTITUTION.md`. Proposed changes must be documented and reviewed by the project lead.
+Amendments to this constitution require a formal review process. Proposed changes must be documented and reviewed by the project lead.
 
 ### Versioning
 
-This operational constitution follows semantic versioning, aligning its major version with significant updates to the main project constitution or major changes in agent operational procedures. Minor and patch versions cover internal clarifications and refinements.
+This constitution follows semantic versioning:
+- **MAJOR**: Backward-incompatible changes to principles.
+- **MINOR**: New principles or significant expansions.
+- **PATCH**: Clarifications, typo fixes.
 
 ### Compliance
 
-All project activities and agent operations MUST adhere to the principles outlined in this operational document, and by extension, the main project constitution (`./CONSTITUTION.md`). Regular reviews will be conducted to ensure compliance.
+All project activities, including code development, research, and publications, MUST adhere to the principles outlined in this document. Regular reviews will be conducted to ensure compliance.

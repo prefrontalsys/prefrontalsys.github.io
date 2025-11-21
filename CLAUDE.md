@@ -304,3 +304,10 @@ Email addresses in content should use obfuscation for spam protection:
 ### Sticky Navigation
 
 Custom CSS in `assets/css/sticky-nav.css` provides sticky navigation bar. Ensure this loads via `hugo.toml` `params.customCSS` configuration.
+
+## Active Technologies
+- Hugo 0.152.2 (extended version for SCSS), HTML5, CSS3, Markdown + Hugo static site generator, hugo-coder theme (git submodule), w3forms (contact handling) (001-knowops-site-redesign)
+- Markdown files in content/, GitHub Pages hosting (001-knowops-site-redesign)
+
+## Recent Changes
+- 001-knowops-site-redesign: Added Hugo 0.152.2 (extended version for SCSS), HTML5, CSS3, Markdown + Hugo static site generator, hugo-coder theme (git submodule), w3forms (contact handling)
