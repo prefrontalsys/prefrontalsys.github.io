@@ -80,11 +80,12 @@ How the system maintains reliability under stress. This includes:
 
 KnowOps provides frameworks to address failures like:
 
-- **Hallucinatory loops**: Generating plausible-sounding but false information, then using it as "evidence" for further claims
-- **Goal drift**: Starting with one objective, then gradually shifting to a different one without realizing it
-- **Context collapse**: Losing track of earlier parts of a conversation or task
-- **Premature convergence**: Settling on the first solution without exploring alternatives
-- **Runaway reasoning**: Getting stuck in endless refinement or second-guessing
+| **Hallucinatory Loops**   | Generating plausible-sounding but false information, then using it as "evidence" for further claims |
+| :------------------------ | :-------------------------------------------------------------------------------------------------- |
+| **Goal Drift**            | **Starting with one objective, then gradually shifting to a different one without realizing it**    |
+| **Context collapse**      | **Losing track of earlier parts of a conversation or task**                                         |
+| **Premature convergence** | **Settling on the first solution without exploring alternatives**                                   |
+| **Runaway reasoning**     | **Getting stuck in endless refinement or second-guessing**                                          |
 
 These aren't solved by better prompts or bigger models. They require **architectural interventions**.
 
