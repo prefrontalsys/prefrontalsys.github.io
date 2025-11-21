@@ -1,0 +1,53 @@
+{{ define "title" }}
+{{ .Title }} · {{ .Site.Title }}
+{{ end }}
+
+{{ define "content" }}
+<section class="container">
+  <header>
+    <h1 class="title">{{ .Title }}</h1>
+  </header>
+
+  {{ .Content }}
+
+  {{ $publications := site.Data.publications }}
+
+  {{ range $type := slice "peer-reviewed" "preprint" "whitepaper" "technical-report" "talk" }}
+  {{ $typePublications := where $publications "type" $type }}
+  {{ if $typePublications }}
+  <h2>{{ humanize $type }}</h2>
+  <div class="publications-list">
+    {{ range $typePublications }}
+    <div class="publication-entry">
+      <div class="publication-title">
+        {{ if .url }}
+        <a href="{{ .url }}">{{ .title }}</a>
+        {{ else }}
+        {{ .title }}
+        {{ end }}
+      </div>
+      <div class="publication-meta">
+        {{ delimit .authors ", " }} ({{ .year }})
+      </div>
+      {{ if .doi }}
+      <div class="publication-doi">
+        <a href="https://doi.org/{{ .doi }}">DOI: {{ .doi }}</a>
+      </div>
+      {{ end }}
+      {{ with .abstract }}
+      <div class="publication-abstract">{{ . }}</div>
+      {{ end }}
+      {{ with .related_frameworks }}
+      <div class="publication-frameworks">
+        {{ range . }}
+        <span class="framework-badge">{{ . }}</span>
+        {{ end }}
+      </div>
+      {{ end }}
+    </div>
+    {{ end }}
+  </div>
+  {{ end }}
+  {{ end }}
+</section>
+{{ end }}

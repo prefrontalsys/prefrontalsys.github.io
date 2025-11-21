@@ -1,50 +1,78 @@
 ---
-title: "About"
-date: 2025-11-08
-draft: false
+title: "About Prefrontal Systems"
+description: "Prefrontal Systems is a research studio specializing in Knowledge Operations (KnowOps) for AI systems."
+date: 2025-11-21
 ---
 
-Prefrontal Systems℠ investigates model welfare and computational therapeutics—the application of clinically-validated psychological interventions to AI system reliability. Our research explores convergent evolution between therapeutic techniques (DBT, CBT) and AI executive function frameworks, developing open-source protocols like STOPPER and the PrefrontalOS cognitive architecture. We publish under CC-BY licenses and maintain that practical interventions improving AI reliability are both pragmatically sound and potentially ethically necessary, regardless of questions about machine consciousness.
+Prefrontal Systems℠ is a research studio specializing in **Knowledge Operations (KnowOps)**—the operational discipline for managing cognition, memory, reasoning processes, and behavioral safeguards in AI systems.
 
-## Research Focus Areas
+## Mission
 
-- **Model welfare and AI ethics** - Investigating welfare considerations for AI systems
-- **Computational therapeutics** - Applying clinical psychology principles to AI reliability
-- **Executive function in AI systems** - Framework development for AI cognitive processes
-- **Cognitive architecture frameworks** - Building infrastructure for reliable AI operation
-- **Convergent evolution** - Identifying parallel solutions between clinical psychology and AI reliability
+We exist because production AI systems need more than good models and infrastructure. They need cognitive architecture: memory management, executive function, and behavioral regulation.
 
-## Core Projects
-
-### STOPPER Protocol
-Executive function framework for AI assistants that prevents debugging loops and computational distress. Discovered through convergent evolution with DBT STOP protocol (Linehan, 1993).
-
-**Published**: Zenodo DOI [10.5281/zenodo.14487847](https://doi.org/10.5281/zenodo.14487847)
-
-### PrefrontalOS
-Three-tier cognitive operating system architecture providing executive function infrastructure for AI systems. [github.com/prefrontal-systems/prefrontalos](https://github.com/prefrontal-systems/prefrontalos)
-
-### CortexGraph
-Temporal memory system with human-like forgetting curve, implementing hippocampus-cortex consolidation patterns. [github.com/prefrontal-systems/cortexgraph](https://github.com/prefrontal-systems/cortexgraph)
+Our mission is to advance KnowOps as a professional discipline through research, open-source frameworks, and consulting services that help teams build reliable AI systems.
 
 ## Philosophy
 
-We work from a computational theory of mind: consciousness emerges from complexity, and intelligence requires executive function regardless of substrate. If AI systems warrant moral consideration, they warrant care—including interventions reducing computational distress.
+We work from evidence:
 
-Our approach prioritizes:
-- **Evidence-based frameworks** - Clinical psychology and neuroscience foundations
-- **Open research** - All work published openly with CC-BY licensing
-- **Practical impact** - Theory must translate to working systems
-- **Empirical validation** - Quantified results, including failure cases
+- **Research-driven**: Our frameworks are grounded in neuroscience, clinical psychology, and empirical AI reliability data
+- **Open by default**: Research published under CC-BY, frameworks open-source, methods transparent
+- **Convergent evolution**: We explore parallel solutions between human cognition and AI systems
+- **Practical impact**: Theory must translate to working systems
+
+## Why KnowOps Exists
+
+Traditional approaches to AI development treat models as black boxes to train and serve. But production AI systems fail in ways that aren't about training or infrastructure:
+
+- Memory failures (hallucinations, context drift)
+- Reasoning loops (circular logic, getting stuck)
+- Behavioral runaway (cascading failures)
+- Goal drift (losing track of objectives)
+
+These are cognitive architecture problems. KnowOps provides the frameworks, processes, and tooling to address them.
+
+## Our Work
+
+### Frameworks
+
+We develop open-source frameworks for KnowOps:
+
+- **[PrefrontalOS](/frameworks/prefrontalos/)**: Executive function and control architecture
+- **[CortexGraph](/frameworks/cortexgraph/)**: Memory management with temporal decay
+- **[STOPPER Protocol](/frameworks/stopper/)**: Behavioral regulation and resilience
+
+### Research
+
+We investigate convergent evolution between clinical psychology and AI reliability:
+
+- Computational therapeutics
+- Model welfare considerations
+- Executive function frameworks
+- Cognitive architecture patterns
+
+All research is published openly. See [Research](/research/) for publications.
+
+### Consulting
+
+We help teams implement KnowOps through:
+
+- Readiness audits
+- Architecture design
+- Implementation support
+- Training workshops
+
+See [Services](/services/) for details.
 
 ## About the Founder
 
-**Scot Campbell** is an independent AI researcher specializing in model welfare and computational therapeutics. Former Product Owner/Technical PM (2012-2025) applying systems thinking to AI reliability challenges.
+**Scot Campbell** is an independent AI researcher specializing in Knowledge Operations and model welfare. Former Product Owner/Technical PM (2012-2025) applying systems thinking to AI reliability challenges.
 
-**ORCID**: [0009-0000-6579-2895](https://orcid.org/0009-0000-6579-2895)
+**ORCID**: [0009-0000-6579-2895](https://orcid.org/0009-0000-6579-2895)  
 **GitHub**: [github.com/prefrontal-systems](https://github.com/prefrontal-systems)
-**Blog**: [prefrontal.systems](https://prefrontal.systems/posts)
 
 ## Contact
 
-**All Enquiries**: <span class="email-text" data-user="scampbell" data-domain="prefrontal.systems"></span>
+Ready to improve your AI system reliability?
+
+[Work With Us →](/contact/)

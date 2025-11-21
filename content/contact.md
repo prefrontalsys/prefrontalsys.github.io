@@ -1,52 +1,13 @@
 ---
-title: "Contact"
-date: 2025-11-08
-draft: false
+title: "Work With Us"
+description: "Contact Prefrontal Systems for KnowOps consulting, audits, architecture design, and training."
+date: 2025-11-21
 ---
 
-## Get in Touch
+# Work With Us
 
-### Research Inquiries
-For academic collaboration, research questions, or scientific discussions:
+Ready to improve your AI system reliability with KnowOps?
 
-**Email**: <a href="#" class="email-link" data-user="research" data-domain="prefrontal.systems"></a>
-**ORCID**: [0009-0000-6579-2895](https://orcid.org/0009-0000-6579-2895)
-
-### Consulting & Commercial
-For implementation consulting, framework training, or AI reliability audits:
-
-**Email**: <a href="#" class="email-link" data-user="contact" data-domain="prefrontal.systems"></a>
-
-### Open Source & GitHub
-For bug reports, feature requests, or contributions:
-
-**GitHub Organization**: [github.com/prefrontal-systems](https://github.com/prefrontal-systems)
-**Issue Tracker**: Repository-specific issue trackers
-
----
-
-## Office
-
-Prefrontal Systems℠ LLC
-Charlotte, NC, USA
-
----
-
-## Social & Professional
-
-- **GitHub**: [@prefrontal-systems](https://github.com/prefrontal-systems)
-- **Personal GitHub**: [@prefrontalsys](https://github.com/prefrontalsys)
-
----
-
-## Contact Form
-
-Prefer to use a form? Send us a message directly:
+Whether you're looking for a readiness audit, architecture design, implementation support, or training, we'd love to hear from you.
 
 {{< contact-form >}}
-
----
-
-## Response Time
-
-We aim to respond to all inquiries within 2-3 business days. For urgent consulting inquiries, please mark your email subject line with "URGENT".

@@ -6,7 +6,7 @@ defaultContentLanguage = 'en'
 
 # Pagination
 [pagination]
-  pagerSize = 20
+pagerSize = 20
 
 # Syntax highlighting
 pygmentsStyle = 'monokai'
@@ -17,85 +17,96 @@ pygmentsCodeFencesGuessSyntax = true
 enableEmoji = true
 
 [params]
-  author = 'PREFRONTAL SYSTEMS℠'
-  description = 'Cognitive architecture for reliable AI systems'
-  keywords = 'computational therapeutics, AI reliability, model welfare, STOPPER protocol, PrefrontalOS, executive function, DBT, CBT, AI research'
-  info = ['· · · · ·','Cognitive Architecture for Reliable AI systems', 'AI Behavioral Research', 'Model Welfare']
-  avatarURL = 'images/brain-graph-whitebg-circle.png'
+author = 'PREFRONTAL SYSTEMS℠'
+description = 'KnowOps - Knowledge Operations for reliable AI systems. Cognitive architecture, memory systems, and behavioral safeguards.'
+keywords = 'KnowOps, knowledge operations, AI cognitive architecture, AI memory systems, executive function for LLMs, STOPPER protocol, PrefrontalOS, CortexGraph, computational therapeutics, model welfare'
+info = [
+  '· · · · ·',
+  'Knowledge Operations for Reliable AI Systems',
+  'Cognitive Architecture',
+  'AI Behavioral Research',
+]
+avatarURL = 'images/brain-graph-whitebg-circle.png'
 
-  # Favicon configuration
-  favicon_32 = '/images/favicon-32x32.png'
-  favicon_16 = '/images/favicon-16x16.png'
-  touchicon = '/images/apple-touch-icon.png'
-  manifest = '/site.webmanifest'
+# Favicon configuration
+favicon_32 = '/images/favicon-32x32.png'
+favicon_16 = '/images/favicon-16x16.png'
+touchicon = '/images/apple-touch-icon.png'
+manifest = '/site.webmanifest'
 
-  # Brand colors (from brand.md)
-  colorScheme = 'light'
-  hideColorSchemeToggle = true
+# Brand colors (from brand.md)
+colorScheme = 'light'
+hideColorSchemeToggle = true
 
-  # Custom JavaScript for email obfuscation
-  customJS = ['js/email-obfuscate.js']
+# Custom JavaScript for email obfuscation
+customJS = ['js/email-obfuscate.js']
 
-  # Custom CSS
-  customCSS = ['css/contact-form.css', 'css/sticky-nav.css']
+# Custom CSS
+customCSS = ['css/contact-form.css', 'css/sticky-nav.css', 'css/knowops.css']
 
-  # Social links
-  [[params.social]]
-    name = 'GitHub'
-    icon = 'fa-brands fa-github fa-2x'
-    weight = 1
-    url = 'https://github.com/prefrontal-systems/'
+# Social links
+[[params.social]]
+name = 'GitHub'
+icon = 'fa-brands fa-github fa-2x'
+weight = 1
+url = 'https://github.com/prefrontal-systems/'
 
-  [[params.social]]
-    name = 'ORCID'
-    icon = 'fa-brands fa-orcid fa-2x'
-    weight = 2
-    url = 'https://orcid.org/0009-0000-6579-2895'
+[[params.social]]
+name = 'ORCID'
+icon = 'fa-brands fa-orcid fa-2x'
+weight = 2
+url = 'https://orcid.org/0009-0000-6579-2895'
 
 # Menu configuration
 [languages.en]
-  languageName = 'English'
+languageName = 'English'
 
-  [[languages.en.menu.main]]
-    name = 'About'
-    weight = 1
-    url = 'about/'
+[[languages.en.menu.main]]
+name = "KnowOps"
+weight = 1
+url = "knowops/"
 
-  [[languages.en.menu.main]]
-    name = 'Services'
-    weight = 1
-    url = 'services/'
+[[languages.en.menu.main]]
+name = "Frameworks"
+weight = 2
+url = "frameworks/"
 
-  [[languages.en.menu.main]]
-    name = 'Projects'
-    weight = 2
-    url = 'projects/'
+[[languages.en.menu.main]]
+name = "Services"
+weight = 3
+url = "services/"
 
-  [[languages.en.menu.main]]
-    name = 'Publications'
-    weight = 3
-    url = 'publications/'
+[[languages.en.menu.main]]
+name = "Journal"
+weight = 5
+url = "journal/"
 
-  [[languages.en.menu.main]]
-    name = 'Blog'
-    weight = 4
-    url = 'posts/'
+[[languages.en.menu.main]]
+name = "About"
+weight = 6
+url = "about/"
 
-  [[languages.en.menu.main]]
-    name = 'Contact'
-    weight = 5
-    url = 'contact/'
+[[languages.en.menu.main]]
+name = "Contact"
+weight = 7
+url = "contact/"
 
 # Taxonomies
 [taxonomies]
-  tag = 'tags'
-  category = 'categories'
-  series = 'series'
+tag = 'tags'
+category = 'categories'
+series = 'series'
+
+# Sitemap configuration
+[sitemap]
+changefreq = "weekly"
+filename = "sitemap.xml"
+priority = 0.5
 
 # Markup configuration
 [markup]
-  [markup.highlight]
-    style = 'monokai'
-    lineNos = true
-    lineNumbersInTable = true
-    tabWidth = 2
+[markup.highlight]
+style = 'monokai'
+lineNos = true
+lineNumbersInTable = true
+tabWidth = 2

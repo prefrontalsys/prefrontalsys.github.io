@@ -1,0 +1,49 @@
+{{ define "main" }}
+<article class="page">
+    <header>
+        <h1 class="page-title">{{ .Title }}</h1>
+        {{ with .Params.framework.positioning }}
+        <p class="framework-positioning">{{ . }}</p>
+        {{ end }}
+    </header>
+    <div class="page-content">
+        {{ .Content }}
+
+        <!-- Framework links -->
+        {{ with .Params.framework }}
+        <div class="framework-links">
+            {{ with .github }}<a href="{{ . }}" class="button">GitHub</a>{{ end }}
+            {{ with .pypi }}<a href="https://pypi.org/project/{{ . }}" class="button">PyPI</a>{{ end }}
+            {{ with .documentation }}<a href="{{ . }}" class="button">Documentation</a>{{ end }}
+        </div>
+        {{ end }}
+
+        <!-- Related research -->
+        {{ with .Params.related_research }}
+        <h2>Related Research</h2>
+        <div class="publications-list">
+            {{ range . }}
+            {{ $doi := . }}
+            {{ range site.Data.publications }}
+            {{ if eq .doi $doi }}
+            <div class="publication-entry">
+                <div class="publication-title">
+                    <a href="https://doi.org/{{ .doi }}">{{ .title }}</a>
+                </div>
+                <div class="publication-meta">
+                    {{ delimit .authors ", " }} ({{ .year }})
+                </div>
+            </div>
+            {{ end }}
+            {{ end }}
+            {{ end }}
+        </div>
+        {{ end }}
+
+        <!-- CTA -->
+        <div class="cta" style="margin-top: 3rem; text-align: center;">
+            <a href="/contact/" class="button">Talk to a KnowOps Architect</a>
+        </div>
+    </div>
+</article>
+{{ end }}

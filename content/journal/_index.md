@@ -1,5 +1,5 @@
 ---
-title: "Blog"
+title: "Journal"
 draft: false
 ---
 
