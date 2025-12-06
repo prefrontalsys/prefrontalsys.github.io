@@ -1,8 +1,10 @@
 ---
-title: "KnowOps Frameworks"
-description: "Open-source frameworks for cognitive architecture in AI systems: PrefrontalOS, CortexGraph, and STOPPER Protocol."
+title: 'KnowOps Frameworks'
+description: 'Open-source frameworks for cognitive architecture in AI systems: PrefrontalOS, CortexGraph, and STOPPER Protocol.'
 date: 2025-11-21
 ---
+
+# \_index
 
 We develop open-source frameworks for building reliable AI systems through cognitive architecture.
 
@@ -15,6 +17,7 @@ Each framework addresses a different aspect of KnowOps—executive function, mem
 **The executive function layer for AI systems**
 
 ### What it provides:
+
 - Goal tracking and hierarchical decomposition
 - Attention allocation and priority management
 - Metacognitive monitoring of reasoning quality
@@ -22,6 +25,7 @@ Each framework addresses a different aspect of KnowOps—executive function, mem
 - Decision-making transparency and audit trails
 
 ### Key features:
+
 - Event-sourced cognitive state tracking
 - Explicit goal representation with success criteria
 - Attention regulation based on task priority
@@ -29,9 +33,11 @@ Each framework addresses a different aspect of KnowOps—executive function, mem
 - Integration with LLM reasoning chains
 
 ### Status:
-**Development** - Core architecture defined, early prototypes available
+
+**Theoretical Framework** - Core architecture defined, reference implementation in design
 
 ### Ideal for:
+
 Teams building autonomous agents that need transparent decision-making and goal management.
 
 [Learn More →](/frameworks/prefrontalos/)
@@ -43,6 +49,7 @@ Teams building autonomous agents that need transparent decision-making and goal 
 **The memory layer for AI knowledge**
 
 ### What it provides:
+
 - Temporal knowledge graphs with decay
 - Context-aware retrieval strategies
 - Fact verification and contradiction detection
@@ -50,6 +57,7 @@ Teams building autonomous agents that need transparent decision-making and goal 
 - Knowledge synthesis and consolidation
 
 ### Key features:
+
 - SQLite-backed persistent memory
 - Time-weighted decay for forgetting
 - Semantic similarity search
@@ -57,9 +65,11 @@ Teams building autonomous agents that need transparent decision-making and goal 
 - Markdown export for human review
 
 ### Status:
-**Beta** - Production-ready with ongoing feature development
+
+**Reference Implementation** - Functional prototype for research and validation
 
 ### Ideal for:
+
 AI systems that need long-term memory, knowledge synthesis, and context management across sessions.
 
 [Learn More →](/frameworks/cortexgraph/)
@@ -71,6 +81,7 @@ AI systems that need long-term memory, knowledge synthesis, and context manageme
 **The behavioral regulation layer for AI safety**
 
 ### What it provides:
+
 - Loop detection and breaking mechanisms
 - Failure mode identification
 - Recovery protocols for common errors
@@ -78,6 +89,7 @@ AI systems that need long-term memory, knowledge synthesis, and context manageme
 - Convergence validation for iterative processes
 
 ### Key features:
+
 - Pattern matching for repetitive reasoning
 - DBT-inspired emotional regulation metaphors
 - Cascade failure prevention
@@ -85,9 +97,11 @@ AI systems that need long-term memory, knowledge synthesis, and context manageme
 - Integration with cognitive monitoring
 
 ### Status:
-**Stable** - Peer-reviewed research, production implementations available
+
+**Published Methodology** - Peer-reviewed research, reference patterns available
 
 ### Ideal for:
+
 Production AI deployments that need reliability guarantees and failure recovery mechanisms.
 
 [Learn More →](/frameworks/stopper/)
